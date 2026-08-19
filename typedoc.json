@@ -1,0 +1,33 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src/index.ts"],
+  "exclude": [
+    "src/util.ts",
+    "src/pdf/colors.ts",
+    "src/pdf/pdfWriter.ts",
+    "src/pdf/parseSvg.ts",
+    "src/pdf/svgPathToPdfOps.ts",
+    "src/pdf/fontMetrics.ts",
+    "src/pdf/svgArcToBezier.ts"
+  ],
+  "out": "docs",
+  "name": "@invisra/draft",
+  "readme": "README.md",
+  "tsconfig": "tsconfig.json",
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "excludeExternals": true,
+  "categorizeByGroup": true,
+  "navigation": {
+    "includeCategories": true,
+    "includeGroups": false
+  },
+  "sort": ["source-order"],
+  "validation": {
+    "notExported": true,
+    "invalidLink": true,
+    "notDocumented": true
+  },
+  "treatWarningsAsErrors": false,
+  "cleanOutputDir": true
+}

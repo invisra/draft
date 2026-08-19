@@ -1,0 +1,3891 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`visual regression: additional scenarios > ISO7200TitleBlock on a plain-border sheet matches its snapshot 1`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="279.4mm" height="215.9mm" viewBox="0 0 279.4 215.9">
+<g transform="translate(0, 215.9) scale(1, -1)">
+<path d="M 10 10 L 269.4 10 L 269.4 205.9 L 10 205.9 L 10 10 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 89.4 10 L 269.4 10 L 269.4 34 L 89.4 34 L 89.4 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 89.4 24 L 269.4 24 L 269.4 34 L 89.4 34 L 89.4 24 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(90.7 31.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">TITLE</text></g>
+<g transform="translate(179.4 26.3) scale(1,-1)"><text x="0" y="0" font-size="3.6" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">SAMPLE PART</text></g>
+<path d="M 89.4 17 L 152.4 17 L 152.4 24 L 89.4 24 L 89.4 17 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(90.7 21.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">LEGAL OWNER</text></g>
+<g transform="translate(120.9 19.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">INVISRA</text></g>
+<path d="M 152.4 17 L 197.4 17 L 197.4 24 L 152.4 24 L 152.4 17 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(153.7 21.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">DOCUMENT TYPE</text></g>
+<g transform="translate(174.9 19.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">DRAWING</text></g>
+<path d="M 197.4 17 L 242.4 17 L 242.4 24 L 197.4 24 L 197.4 17 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(198.7 21.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">IDENTIFICATION NO</text></g>
+<g transform="translate(219.9 19.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">DRW-2000</text></g>
+<path d="M 242.4 17 L 269.4 17 L 269.4 24 L 242.4 24 L 242.4 17 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(243.7 21.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SIZE</text></g>
+<g transform="translate(255.9 19.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">A</text></g>
+<path d="M 89.4 10 L 129 10 L 129 17 L 89.4 17 L 89.4 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(90.7 14.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">CREATOR</text></g>
+<g transform="translate(109.2 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">S. RICHS</text></g>
+<path d="M 129 10 L 161.4 10 L 161.4 17 L 129 17 L 129 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(130.3 14.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">DATE OF ISSUE</text></g>
+<g transform="translate(145.2 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">2026-07-08</text></g>
+<path d="M 161.4 10 L 201 10 L 201 17 L 161.4 17 L 161.4 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(162.7 14.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">APPROVAL PERSON</text></g>
+<g transform="translate(181.2 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">J. DOE</text></g>
+<path d="M 201 10 L 222.6 10 L 222.6 17 L 201 17 L 201 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(202.3 14.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">REV</text></g>
+<g transform="translate(211.8 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">A</text></g>
+<path d="M 222.6 10 L 269.4 10 L 269.4 17 L 222.6 17 L 222.6 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(223.9 14.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SHEET</text></g>
+<g transform="translate(246 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">1/1</text></g>
+</g>
+</svg>
+"
+`;
+
+exports[`visual regression: additional scenarios > a BOM table plus dot/arrow-terminus item balloons matches its snapshot 1`] = `
+"<path d="M 0 25 L 13.95349 25 L 13.95349 30 L 0 30 L 0 25 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(6.97674 26.73) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ITEM</text></g>
+<path d="M 13.95349 25 L 27.90698 25 L 27.90698 30 L 13.95349 30 L 13.95349 25 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(20.93023 26.73) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">QTY</text></g>
+<path d="M 27.90698 25 L 53.48837 25 L 53.48837 30 L 27.90698 30 L 27.90698 25 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(40.69767 26.73) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">PART NUMBER</text></g>
+<path d="M 53.48837 25 L 100 25 L 100 30 L 53.48837 30 L 53.48837 25 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(76.74419 26.73) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">DESCRIPTION</text></g>
+<path d="M 0 19 L 13.95349 19 L 13.95349 25 L 0 25 L 0 19 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(6.97674 21.23) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">1</text></g>
+<path d="M 13.95349 19 L 27.90698 19 L 27.90698 25 L 13.95349 25 L 13.95349 19 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(20.93023 21.23) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">1</text></g>
+<path d="M 27.90698 19 L 53.48837 19 L 53.48837 25 L 27.90698 25 L 27.90698 19 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(40.69767 21.23) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">HSG-100</text></g>
+<path d="M 53.48837 19 L 100 19 L 100 25 L 53.48837 25 L 53.48837 19 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(54.78837 21.23) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">Housing, main</text></g>
+<path d="M 0 13 L 13.95349 13 L 13.95349 19 L 0 19 L 0 13 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(6.97674 15.23) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">2</text></g>
+<path d="M 13.95349 13 L 27.90698 13 L 27.90698 19 L 13.95349 19 L 13.95349 13 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(20.93023 15.23) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">4</text></g>
+<path d="M 27.90698 13 L 53.48837 13 L 53.48837 19 L 27.90698 19 L 27.90698 13 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(40.69767 15.23) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">MS90725-10</text></g>
+<path d="M 53.48837 13 L 100 13 L 100 19 L 53.48837 19 L 53.48837 13 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(54.78837 15.23) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">Bolt, hex socket</text></g>
+<path d="M 0 0 L -5.65685 5.65685" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M -5.65685 5.65685 L -9.65685 5.65685" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 0.375 0 A 0.375 0.375 0 0 1 -0.375 0 A 0.375 0.375 0 0 1 0.375 0 L 0.375 0 Z" fill="black" />
+<path d="M -9.65685 5.65685 A 2.75 2.75 0 0 1 -15.15685 5.65685 A 2.75 2.75 0 0 1 -9.65685 5.65685 L -9.65685 5.65685 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(-12.40685 4.78185) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">1</text></g>
+<path d="M 20 0 L 25.65685 5.65685" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 25.65685 5.65685 L 29.65685 5.65685" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 20 0 L 22.47487 1.76777 L 21.76777 2.47487 L 20 0 Z" fill="black" />
+<path d="M 35.15685 5.65685 A 2.75 2.75 0 0 1 29.65685 5.65685 A 2.75 2.75 0 0 1 35.15685 5.65685 L 35.15685 5.65685 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(32.40685 4.78185) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">2</text></g>"
+`;
+
+exports[`visual regression: additional scenarios > a detail-view callout and both break-line conventions match their snapshot 1`] = `
+"<path d="M 8 0 A 8 8 0 0 1 -8 0 A 8 8 0 0 1 8 0 L 8 0 Z" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5,3,1.5" />
+<path d="M 5.65685 5.65685 L 11.31371 11.31371" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 11.31371 11.31371 L 15.31371 11.31371" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 5.65685 5.65685 L 8.13173 7.42462 L 7.42462 8.13173 L 5.65685 5.65685 Z" fill="black" />
+<g transform="translate(16.31371 10.43871) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">DETAIL A</text></g>
+<path d="M 0 30 L 15 30 L 18.5 34 L 21.5 26 L 25 30 L 40 30" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 60 10 A 10 10 0 0 0 60 30 A 10 10 0 0 1 60 50" fill="none" stroke="black" stroke-width="0.25" />"
+`;
+
+exports[`visual regression: additional scenarios > a labeled cutting-plane line matches its snapshot 1`] = `
+"<path d="M 0 20 L 80 20" fill="none" stroke="black" stroke-width="0.6" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 0 20 L 0 14" fill="none" stroke="black" stroke-width="0.6" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 0 14 L 0.6 17.5 L -0.6 17.5 L 0 14 Z" fill="black" />
+<g transform="translate(0 9) scale(1,-1)"><text x="0" y="0" font-size="4" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">A</text></g>
+<path d="M 80 20 L 80 14" fill="none" stroke="black" stroke-width="0.6" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 80 14 L 80.6 17.5 L 79.4 17.5 L 80 14 Z" fill="black" />
+<g transform="translate(80 9) scale(1,-1)"><text x="0" y="0" font-size="4" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">A</text></g>
+<g transform="translate(40 -8) scale(1,-1)"><text x="0" y="0" font-size="4" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">SECTION A-A</text></g>"
+`;
+
+exports[`visual regression: additional scenarios > a revision cloud (rectangular boundary) with a circle and a triangle revision symbol matches its snapshot 1`] = `
+"<path d="M 0 0 A 6.27556 6.27556 0 0 1 8 0 A 6.27556 6.27556 0 0 1 16 0 A 6.27556 6.27556 0 0 1 24 0 A 6.27556 6.27556 0 0 1 32 0 A 6.27556 6.27556 0 0 1 40 0 A 5.88333 5.88333 0 0 1 40 7.5 A 5.88333 5.88333 0 0 1 40 15 A 5.88333 5.88333 0 0 1 40 22.5 A 5.88333 5.88333 0 0 1 40 30 A 6.27556 6.27556 0 0 1 32 30 A 6.27556 6.27556 0 0 1 24 30 A 6.27556 6.27556 0 0 1 16 30 A 6.27556 6.27556 0 0 1 8 30 A 6.27556 6.27556 0 0 1 0 30 A 5.88333 5.88333 0 0 1 0 22.5 A 5.88333 5.88333 0 0 1 0 15 A 5.88333 5.88333 0 0 1 0 7.5 A 5.88333 5.88333 0 0 1 0 0 L 0 0 Z" fill="none" stroke="black" stroke-width="0.35" />
+<path d="M 49 30 A 3 3 0 0 1 43 30 A 3 3 0 0 1 49 30 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(46 28.845) scale(1,-1)"><text x="0" y="0" font-size="3.3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">A</text></g>
+<path d="M 58 33.348 L 61.132 27.948 L 54.868 27.948 L 58 33.348 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(58 28.575) scale(1,-1)"><text x="0" y="0" font-size="3.3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">B</text></g>"
+`;
+
+exports[`visual regression: additional scenarios > a title block citing an ISO 2768 general-tolerance note matches its snapshot 1`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="279.4mm" height="215.9mm" viewBox="0 0 279.4 215.9">
+<g transform="translate(0, 215.9) scale(1, -1)">
+<path d="M 10 10 L 269.4 10 L 269.4 205.9 L 10 205.9 L 10 10 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 79.4 10 L 269.4 10 L 269.4 48 L 79.4 48 L 79.4 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 79.4 40.4 L 99.35 40.4 L 99.35 48 L 79.4 48 L 79.4 40.4 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 99.35 40.4 L 137.255 40.4 L 137.255 48 L 99.35 48 L 99.35 40.4 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(118.3025 43.5) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">NAME</text></g>
+<path d="M 137.255 40.4 L 159.2 40.4 L 159.2 48 L 137.255 48 L 137.255 40.4 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(148.2275 43.5) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">DATE</text></g>
+<path d="M 79.4 32.8 L 99.35 32.8 L 99.35 40.4 L 79.4 40.4 L 79.4 32.8 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 35.935) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">DRAWN</text></g>
+<path d="M 99.35 32.8 L 137.255 32.8 L 137.255 40.4 L 99.35 40.4 L 99.35 32.8 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 137.255 32.8 L 159.2 32.8 L 159.2 40.4 L 137.255 40.4 L 137.255 32.8 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 79.4 25.2 L 99.35 25.2 L 99.35 32.8 L 79.4 32.8 L 79.4 25.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 28.335) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">CHECKED</text></g>
+<path d="M 99.35 25.2 L 137.255 25.2 L 137.255 32.8 L 99.35 32.8 L 99.35 25.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 137.255 25.2 L 159.2 25.2 L 159.2 32.8 L 137.255 32.8 L 137.255 25.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 79.4 17.6 L 99.35 17.6 L 99.35 25.2 L 79.4 25.2 L 79.4 17.6 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 20.735) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">ENG APPR.</text></g>
+<path d="M 99.35 17.6 L 137.255 17.6 L 137.255 25.2 L 99.35 25.2 L 99.35 17.6 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 137.255 17.6 L 159.2 17.6 L 159.2 25.2 L 137.255 25.2 L 137.255 17.6 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 79.4 10 L 99.35 10 L 99.35 17.6 L 79.4 17.6 L 79.4 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 13.135) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">MFG APPR.</text></g>
+<path d="M 99.35 10 L 137.255 10 L 137.255 17.6 L 99.35 17.6 L 99.35 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 137.255 10 L 159.2 10 L 159.2 17.6 L 137.255 17.6 L 137.255 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 159.2 40 L 176.832 40 L 176.832 48 L 159.2 48 L 159.2 40 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 45.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SIZE</text></g>
+<g transform="translate(168.016 42.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">A</text></g>
+<path d="M 176.832 40 L 248.462 40 L 248.462 48 L 176.832 48 L 176.832 40 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(178.132 45.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">DWG NO</text></g>
+<g transform="translate(212.647 42.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">DRW-1000</text></g>
+<path d="M 248.462 40 L 269.4 40 L 269.4 48 L 248.462 48 L 248.462 40 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(249.762 45.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">REV</text></g>
+<g transform="translate(258.931 42.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">A</text></g>
+<path d="M 159.2 26 L 269.4 26 L 269.4 40 L 159.2 40 L 159.2 26 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 37.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">TITLE</text></g>
+<g transform="translate(214.3 28.3) scale(1,-1)"><text x="0" y="0" font-size="3.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">BRACKET, MOUNTING</text></g>
+<path d="M 159.2 18 L 186.75 18 L 186.75 26 L 159.2 26 L 159.2 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 23.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">MATERIAL</text></g>
+<g transform="translate(172.975 20.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">AL 6061-T6</text></g>
+<path d="M 186.75 18 L 214.3 18 L 214.3 26 L 186.75 26 L 186.75 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(188.05 23.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">FINISH</text></g>
+<path d="M 214.3 18 L 248.462 18 L 248.462 26 L 214.3 26 L 214.3 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(215.6 23.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">TOLERANCES</text></g>
+<g transform="translate(215.6 20.97) scale(1,-1)"><text x="0" y="0" font-size="2.1" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">ISO 2768-mK</text></g>
+<path d="M 248.462 18 L 269.4 18 L 269.4 26 L 248.462 26 L 248.462 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 261.531 21.5 A 2.6 2.6 0 0 1 256.331 21.5 A 2.6 2.6 0 0 1 261.531 21.5 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 260.231 21.5 A 1.3 1.3 0 0 1 257.631 21.5 A 1.3 1.3 0 0 1 260.231 21.5 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 262.571 20.2 L 262.571 22.8 L 269.071 24.1 L 269.071 18.9 L 262.571 20.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 159.2 10 L 214.3 10 L 214.3 18 L 159.2 18 L 159.2 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 15.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SCALE</text></g>
+<g transform="translate(186.75 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">1:1</text></g>
+<path d="M 214.3 10 L 269.4 10 L 269.4 18 L 214.3 18 L 214.3 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(215.6 15.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SHEET</text></g>
+<g transform="translate(241.85 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">1 OF 1</text></g>
+</g>
+</svg>
+"
+`;
+
+exports[`visual regression: additional scenarios > basic (boxed) and reference (parenthesized) dimensions, linear and radial, match their snapshot 1`] = `
+"<path d="M 0 -1 L 0 -12" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 40 -1 L 40 -12" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 3 -10 L 15.1225 -10" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 37 -10 L 24.8775 -10" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 0 -10 L 3 -10.5 L 3 -9.5 L 0 -10 Z" fill="black" />
+<path d="M 40 -10 L 37 -9.5 L 37 -10.5 L 40 -10 Z" fill="black" />
+<g transform="translate(20 -10.875) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">40.00</text></g>
+<path d="M 16.1225 -12.5 L 23.8775 -12.5 L 23.8775 -7.5 L 16.1225 -7.5 L 16.1225 -12.5 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 0 19 L 0 8" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 40 19 L 40 8" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 3 10 L 15.04 10" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 37 10 L 24.96 10" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 0 10 L 3 9.5 L 3 10.5 L 0 10 Z" fill="black" />
+<path d="M 40 10 L 37 10.5 L 37 9.5 L 40 10 Z" fill="black" />
+<g transform="translate(20 9.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">(40.00)</text></g>
+<path d="M 66.9282 4 L 73.85641 8" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 73.85641 8 L 77.85641 8" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 66.9282 4 L 69.77628 5.06699 L 69.27628 5.93301 L 66.9282 4 Z" fill="black" />
+<g transform="translate(78.85641 7.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">R8.00</text></g>
+<path d="M 78.10641 5.5 L 86.27641 5.5 L 86.27641 10.5 L 78.10641 10.5 L 78.10641 5.5 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 105.65685 5.65685 L 111.31371 11.31371" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 111.31371 11.31371 L 115.31371 11.31371" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 105.65685 5.65685 L 108.13173 7.42462 L 107.42462 8.13173 L 105.65685 5.65685 Z" fill="black" />
+<g transform="translate(116.31371 10.43871) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">(⌀16.00)</text></g>"
+`;
+
+exports[`visual regression: additional scenarios > datum target symbols (point/line/area) match their snapshot 1`] = `
+"<path d="M -2.5 -2.5 L 2.5 2.5" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M -2.5 2.5 L 2.5 -2.5" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 0 0 L -4.24264 -4.24264" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M -3.07107 -7.07107 A 4 4 0 0 1 -11.07107 -7.07107 A 4 4 0 0 1 -3.07107 -7.07107 L -3.07107 -7.07107 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M -11.07107 -7.07107 L -3.07107 -7.07107" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(-7.07107 -9.27107) scale(1,-1)"><text x="0" y="0" font-size="3.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">A1</text></g>
+<path d="M 27.5 -2.5 L 32.5 2.5" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 27.5 2.5 L 32.5 -2.5" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 30 0 L 50 0" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5,3,1.5" />
+<path d="M 47.5 -2.5 L 52.5 2.5" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 47.5 2.5 L 52.5 -2.5" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 40 0 L 40 -6" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 44 -10 A 4 4 0 0 1 36 -10 A 4 4 0 0 1 44 -10 L 44 -10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 36 -10 L 44 -10" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(40 -12.2) scale(1,-1)"><text x="0" y="0" font-size="3.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">A2</text></g>
+<path d="M 90.40277 14.03524 L 95.96476 19.59723" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 86.95809 14.8332 L 95.1668 23.04191" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 84.83614 16.95389 L 93.04611 25.16386" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 84.03455 20.39494 L 89.60506 25.96545" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 96 20 A 6 6 0 0 1 84 20 A 6 6 0 0 1 96 20 Z" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5,3,1.5" />
+<path d="M 90 20 L 100.2397 30.2397" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 109.66102 34.14214 A 5.51888 5.51888 0 0 1 98.62326 34.14214 A 5.51888 5.51888 0 0 1 109.66102 34.14214 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 98.62326 34.14214 L 109.66102 34.14214" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(104.14214 31.10675) scale(1,-1)"><text x="0" y="0" font-size="3.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">B1</text></g>
+<g transform="translate(104.14214 34.96997) scale(1,-1)"><text x="0" y="0" font-size="2.72" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">⌀12.00</text></g>"
+`;
+
+exports[`visual regression: additional scenarios > the full ANSI31-38 material hatch pattern gallery matches its snapshot 1`] = `
+"<path d="M 17.96051 0 L 20 2.03949" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 13.47038 0 L 20 6.52962" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 8.98026 0 L 20 11.01974" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 4.49013 0 L 19.49013 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 0 L 15 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 4.49013 L 10.50987 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 8.98026 L 6.01974 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 13.47038 L 1.52962 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 0 L 20 0 L 20 15 L 0 15 L 0 0 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 13.47038 0 L 20 6.52962" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 0 L 15 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 13.47038 L 1.52962 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 8.98026 0 L 20 11.01974" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 4.49013 L 10.50987 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 0 L 20 0 L 20 15 L 0 15 L 0 0 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 17.96051 0 L 20 2.03949" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 8.98026 0 L 20 11.01974" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 0 L 15 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 8.98026 L 6.01974 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 13.47038 0 L 20 6.52962" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 4.49013 0 L 19.49013 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 0 4.49013 L 10.50987 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 0 13.47038 L 1.52962 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 0 0 L 20 0 L 20 15 L 0 15 L 0 0 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 0 0 L 15 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 4.49013 L 10.50987 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.96051 0 L 20 2.03949" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 8.98026 L 6.01974 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 13.47038 0 L 20 6.52962" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 13.47038 L 1.52962 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 0 L 20 0 L 20 15 L 0 15 L 0 0 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 17.96051 0 L 20 2.03949" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 8.98026 0 L 20 11.01974" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 0 L 15 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 8.98026 L 6.01974 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 13.47038 0 L 20 6.52962" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 4.49013 0 L 19.49013 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 0 4.49013 L 10.50987 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 0 13.47038 L 1.52962 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 0 0 L 20 0 L 20 15 L 0 15 L 0 0 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 17.96051 0 L 20 2.03949" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 13.47038 0 L 20 6.52962" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 8.98026 0 L 20 11.01974" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 4.49013 0 L 19.49013 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 0 0 L 15 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 0 4.49013 L 10.50987 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 0 8.98026 L 6.01974 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 0 13.47038 L 1.52962 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 0 0 L 20 0 L 20 15 L 0 15 L 0 0 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 17.96051 0 L 20 2.03949" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 13.47038 0 L 20 6.52962" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 8.98026 0 L 20 11.01974" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 4.49013 0 L 19.49013 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 0 L 15 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 4.49013 L 10.50987 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 8.98026 L 6.01974 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 13.47038 L 1.52962 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 11.4309 L 16.4309 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 6.94077 L 11.94077 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 2.45064 L 7.45064 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.96051 0 L 2.96051 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 13.47038 0 L 0 13.47038" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 8.98026 0 L 0 8.98026" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 4.49013 0 L 0 4.49013" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 0 L 20 0 L 20 15 L 0 15 L 0 0 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 17.96051 0 L 20 2.03949" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 13.47038 0 L 20 6.52962" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 8.98026 0 L 20 11.01974" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 4.49013 0 L 19.49013 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 0 L 15 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 4.49013 L 10.50987 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 8.98026 L 6.01974 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 0 13.47038 L 1.52962 15" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 11.4309 L 16.4309 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 20 6.94077 L 11.94077 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 20 2.45064 L 7.45064 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 17.96051 0 L 2.96051 15" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 13.47038 0 L 0 13.47038" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 8.98026 0 L 0 8.98026" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 4.49013 0 L 0 4.49013" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 0 0 L 20 0 L 20 15 L 0 15 L 0 0 Z" fill="none" stroke="black" stroke-width="0.5" />"
+`;
+
+exports[`visual regression: basic-sheet example > DXF export of sheet 1's geometry layer matches its snapshot 1`] = `
+"0
+SECTION
+2
+HEADER
+9
+$ACADVER
+1
+AC1009
+9
+$INSUNITS
+70
+4
+0
+ENDSEC
+0
+SECTION
+2
+TABLES
+0
+TABLE
+2
+LTYPE
+70
+3
+0
+LTYPE
+2
+HIDDEN
+70
+0
+3
+
+72
+65
+73
+2
+40
+4.500000
+49
+3.000000
+74
+0
+49
+-1.500000
+74
+0
+0
+LTYPE
+2
+CENTER
+70
+0
+3
+
+72
+65
+73
+4
+40
+30.000000
+49
+24.000000
+74
+0
+49
+-1.500000
+74
+0
+49
+3.000000
+74
+0
+49
+-1.500000
+74
+0
+0
+ENDTAB
+0
+TABLE
+2
+LAYER
+70
+3
+0
+LAYER
+2
+VISIBLE
+70
+0
+62
+7
+6
+CONTINUOUS
+0
+LAYER
+2
+HIDDEN
+70
+0
+62
+1
+6
+HIDDEN
+0
+LAYER
+2
+CENTER
+70
+0
+62
+3
+6
+CENTER
+0
+ENDTAB
+0
+ENDSEC
+0
+SECTION
+2
+ENTITIES
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+1
+0
+VERTEX
+8
+VISIBLE
+10
+105.700000
+20
+101.950000
+0
+VERTEX
+8
+VISIBLE
+10
+173.700000
+20
+101.950000
+42
+0.414214
+0
+VERTEX
+8
+VISIBLE
+10
+179.700000
+20
+107.950000
+0
+VERTEX
+8
+VISIBLE
+10
+179.700000
+20
+145.950000
+42
+0.414214
+0
+VERTEX
+8
+VISIBLE
+10
+173.700000
+20
+151.950000
+0
+VERTEX
+8
+VISIBLE
+10
+105.700000
+20
+151.950000
+42
+0.414214
+0
+VERTEX
+8
+VISIBLE
+10
+99.700000
+20
+145.950000
+0
+VERTEX
+8
+VISIBLE
+10
+99.700000
+20
+107.950000
+42
+0.414214
+0
+SEQEND
+0
+POLYLINE
+8
+HIDDEN
+62
+1
+66
+1
+70
+1
+0
+VERTEX
+8
+HIDDEN
+10
+124.700000
+20
+118.950000
+0
+VERTEX
+8
+HIDDEN
+10
+154.700000
+20
+118.950000
+0
+VERTEX
+8
+HIDDEN
+10
+154.700000
+20
+134.950000
+0
+VERTEX
+8
+HIDDEN
+10
+124.700000
+20
+134.950000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+1
+0
+VERTEX
+8
+VISIBLE
+10
+115.700000
+20
+113.950000
+42
+1.000000
+0
+VERTEX
+8
+VISIBLE
+10
+107.700000
+20
+113.950000
+42
+1.000000
+0
+SEQEND
+0
+POLYLINE
+8
+CENTER
+62
+3
+66
+1
+70
+0
+0
+VERTEX
+8
+CENTER
+10
+105.200000
+20
+113.950000
+0
+VERTEX
+8
+CENTER
+10
+118.200000
+20
+113.950000
+0
+SEQEND
+0
+POLYLINE
+8
+CENTER
+62
+3
+66
+1
+70
+0
+0
+VERTEX
+8
+CENTER
+10
+111.700000
+20
+107.450000
+0
+VERTEX
+8
+CENTER
+10
+111.700000
+20
+120.450000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+1
+0
+VERTEX
+8
+VISIBLE
+10
+171.700000
+20
+113.950000
+42
+1.000000
+0
+VERTEX
+8
+VISIBLE
+10
+163.700000
+20
+113.950000
+42
+1.000000
+0
+SEQEND
+0
+POLYLINE
+8
+CENTER
+62
+3
+66
+1
+70
+0
+0
+VERTEX
+8
+CENTER
+10
+161.200000
+20
+113.950000
+0
+VERTEX
+8
+CENTER
+10
+174.200000
+20
+113.950000
+0
+SEQEND
+0
+POLYLINE
+8
+CENTER
+62
+3
+66
+1
+70
+0
+0
+VERTEX
+8
+CENTER
+10
+167.700000
+20
+107.450000
+0
+VERTEX
+8
+CENTER
+10
+167.700000
+20
+120.450000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+1
+0
+VERTEX
+8
+VISIBLE
+10
+115.700000
+20
+139.950000
+42
+1.000000
+0
+VERTEX
+8
+VISIBLE
+10
+107.700000
+20
+139.950000
+42
+1.000000
+0
+SEQEND
+0
+POLYLINE
+8
+CENTER
+62
+3
+66
+1
+70
+0
+0
+VERTEX
+8
+CENTER
+10
+105.200000
+20
+139.950000
+0
+VERTEX
+8
+CENTER
+10
+118.200000
+20
+139.950000
+0
+SEQEND
+0
+POLYLINE
+8
+CENTER
+62
+3
+66
+1
+70
+0
+0
+VERTEX
+8
+CENTER
+10
+111.700000
+20
+133.450000
+0
+VERTEX
+8
+CENTER
+10
+111.700000
+20
+146.450000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+1
+0
+VERTEX
+8
+VISIBLE
+10
+171.700000
+20
+139.950000
+42
+1.000000
+0
+VERTEX
+8
+VISIBLE
+10
+163.700000
+20
+139.950000
+42
+1.000000
+0
+SEQEND
+0
+POLYLINE
+8
+CENTER
+62
+3
+66
+1
+70
+0
+0
+VERTEX
+8
+CENTER
+10
+161.200000
+20
+139.950000
+0
+VERTEX
+8
+CENTER
+10
+174.200000
+20
+139.950000
+0
+SEQEND
+0
+POLYLINE
+8
+CENTER
+62
+3
+66
+1
+70
+0
+0
+VERTEX
+8
+CENTER
+10
+167.700000
+20
+133.450000
+0
+VERTEX
+8
+CENTER
+10
+167.700000
+20
+146.450000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+43.029437
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+45.000000
+20
+61.970563
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+40.201010
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+45.000000
+20
+64.798990
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+37.372583
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+45.000000
+20
+67.627417
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+34.544156
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+45.000000
+20
+70.455844
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+31.715729
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+45.000000
+20
+73.284271
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+28.887302
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+34.690714
+20
+65.803412
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+36.196588
+20
+67.309286
+0
+VERTEX
+8
+VISIBLE
+10
+45.000000
+20
+76.112698
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+26.058875
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+31.134588
+20
+65.075714
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+36.924286
+20
+70.865412
+0
+VERTEX
+8
+VISIBLE
+10
+45.000000
+20
+78.941125
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+23.230447
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+29.147290
+20
+65.916843
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+36.083157
+20
+72.852710
+0
+VERTEX
+8
+VISIBLE
+10
+43.230447
+20
+80.000000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+20.402020
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+27.765480
+20
+67.363459
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+34.636541
+20
+74.234520
+0
+VERTEX
+8
+VISIBLE
+10
+40.402020
+20
+80.000000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+20.000000
+20
+62.426407
+0
+VERTEX
+8
+VISIBLE
+10
+27.046146
+20
+69.472553
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+32.527447
+20
+74.953854
+0
+VERTEX
+8
+VISIBLE
+10
+37.573593
+20
+80.000000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+20.000000
+20
+65.254834
+0
+VERTEX
+8
+VISIBLE
+10
+34.745166
+20
+80.000000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+20.000000
+20
+68.083261
+0
+VERTEX
+8
+VISIBLE
+10
+31.916739
+20
+80.000000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+20.000000
+20
+70.911688
+0
+VERTEX
+8
+VISIBLE
+10
+29.088312
+20
+80.000000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+20.000000
+20
+73.740115
+0
+VERTEX
+8
+VISIBLE
+10
+26.259885
+20
+80.000000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+20.000000
+20
+76.568542
+0
+VERTEX
+8
+VISIBLE
+10
+23.431458
+20
+80.000000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+0
+0
+VERTEX
+8
+VISIBLE
+10
+20.000000
+20
+79.396970
+0
+VERTEX
+8
+VISIBLE
+10
+20.603030
+20
+80.000000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+1
+0
+VERTEX
+8
+VISIBLE
+10
+20.000000
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+45.000000
+20
+60.000000
+0
+VERTEX
+8
+VISIBLE
+10
+45.000000
+20
+80.000000
+0
+VERTEX
+8
+VISIBLE
+10
+20.000000
+20
+80.000000
+0
+SEQEND
+0
+POLYLINE
+8
+VISIBLE
+62
+7
+66
+1
+70
+1
+0
+VERTEX
+8
+VISIBLE
+10
+37.000000
+20
+70.000000
+42
+1.000000
+0
+VERTEX
+8
+VISIBLE
+10
+27.000000
+20
+70.000000
+42
+1.000000
+0
+SEQEND
+0
+ENDSEC
+0
+EOF
+"
+`;
+
+exports[`visual regression: basic-sheet example > PDF export of sheet 1 (whole sheet, not just geometry) matches its snapshot 1`] = `
+"%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R /OCProperties << /OCGs [6 0 R 7 0 R 8 0 R] /D << /OFF [8 0 R] >> >> >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> /Properties << /MC1 6 0 R /MC2 7 0 R /MC3 8 0 R >> >> /Contents 9 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /OCG /Name (geometry) >>
+endobj
+7 0 obj
+<< /Type /OCG /Name (dimensions) >>
+endobj
+8 0 obj
+<< /Type /OCG /Name (construction) >>
+endobj
+9 0 obj
+<< /Length 16812 >>
+stream
+2.8346 0 0 2.8346 0 0 cm
+q
+0 0 0 RG
+0.5 w
+10 10 m
+269.4 10 l
+269.4 205.9 l
+10 205.9 l
+10 10 l
+h
+S
+Q
+q
+0 0 0 RG
+0.2 w
+61.88 205.9 m
+61.88 215.9 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+61.88 0 m
+61.88 10 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+113.76 205.9 m
+113.76 215.9 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+113.76 0 m
+113.76 10 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+165.64 205.9 m
+165.64 215.9 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+165.64 0 m
+165.64 10 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+217.52 205.9 m
+217.52 215.9 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+217.52 0 m
+217.52 10 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+0 58.975 m
+10 58.975 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+269.4 58.975 m
+279.4 58.975 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+0 107.95 m
+10 107.95 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+269.4 107.95 m
+279.4 107.95 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+0 156.925 m
+10 156.925 l
+S
+Q
+q
+0 0 0 RG
+0.2 w
+269.4 156.925 m
+279.4 156.925 l
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 35.245 210.025 Tm
+(1) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 35.245 4.125 Tm
+(1) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 87.125 210.025 Tm
+(2) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 87.125 4.125 Tm
+(2) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 139.005 210.025 Tm
+(3) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 139.005 4.125 Tm
+(3) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 190.885 210.025 Tm
+(4) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 190.885 4.125 Tm
+(4) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 242.765 210.025 Tm
+(5) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 242.765 4.125 Tm
+(5) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 4.1662 180.5375 Tm
+(A) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 273.5662 180.5375 Tm
+(A) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 4.1662 131.5625 Tm
+(B) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 273.5662 131.5625 Tm
+(B) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 4.0975 82.5875 Tm
+(C) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 273.4975 82.5875 Tm
+(C) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 4.0975 33.6125 Tm
+(D) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 273.4975 33.6125 Tm
+(D) Tj
+ET
+Q
+/OC /MC1 BDC
+q
+0 0 0 RG
+0.5 w
+105.7 101.95 m
+173.7 101.95 l
+177.0137 101.95 179.7 104.6363 179.7 107.95 c
+179.7 145.95 l
+179.7 149.2637 177.0137 151.95 173.7 151.95 c
+105.7 151.95 l
+102.3863 151.95 99.7 149.2637 99.7 145.95 c
+99.7 107.95 l
+99.7 104.6363 102.3863 101.95 105.7 101.95 c
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+[3 1.5] 0 d
+124.7 118.95 m
+154.7 118.95 l
+154.7 134.95 l
+124.7 134.95 l
+124.7 118.95 l
+h
+S
+Q
+q
+0 0 0 RG
+0.5 w
+115.7 113.95 m
+115.7 116.1591 113.9091 117.95 111.7 117.95 c
+109.4909 117.95 107.7 116.1591 107.7 113.95 c
+107.7 111.7409 109.4909 109.95 111.7 109.95 c
+113.9091 109.95 115.7 111.7409 115.7 113.95 c
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+[24 1.5 3 1.5] 0 d
+105.2 113.95 m
+118.2 113.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+[24 1.5 3 1.5] 0 d
+111.7 107.45 m
+111.7 120.45 l
+S
+Q
+q
+0 0 0 RG
+0.5 w
+171.7 113.95 m
+171.7 116.1591 169.9091 117.95 167.7 117.95 c
+165.4909 117.95 163.7 116.1591 163.7 113.95 c
+163.7 111.7409 165.4909 109.95 167.7 109.95 c
+169.9091 109.95 171.7 111.7409 171.7 113.95 c
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+[24 1.5 3 1.5] 0 d
+161.2 113.95 m
+174.2 113.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+[24 1.5 3 1.5] 0 d
+167.7 107.45 m
+167.7 120.45 l
+S
+Q
+q
+0 0 0 RG
+0.5 w
+115.7 139.95 m
+115.7 142.1591 113.9091 143.95 111.7 143.95 c
+109.4909 143.95 107.7 142.1591 107.7 139.95 c
+107.7 137.7409 109.4909 135.95 111.7 135.95 c
+113.9091 135.95 115.7 137.7409 115.7 139.95 c
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+[24 1.5 3 1.5] 0 d
+105.2 139.95 m
+118.2 139.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+[24 1.5 3 1.5] 0 d
+111.7 133.45 m
+111.7 146.45 l
+S
+Q
+q
+0 0 0 RG
+0.5 w
+171.7 139.95 m
+171.7 142.1591 169.9091 143.95 167.7 143.95 c
+165.4909 143.95 163.7 142.1591 163.7 139.95 c
+163.7 137.7409 165.4909 135.95 167.7 135.95 c
+169.9091 135.95 171.7 137.7409 171.7 139.95 c
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+[24 1.5 3 1.5] 0 d
+161.2 139.95 m
+174.2 139.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+[24 1.5 3 1.5] 0 d
+167.7 133.45 m
+167.7 146.45 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+43.0294 60 m
+45 61.9706 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+40.201 60 m
+45 64.799 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+37.3726 60 m
+45 67.6274 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+34.5442 60 m
+45 70.4558 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+31.7157 60 m
+45 73.2843 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+28.8873 60 m
+34.6907 65.8034 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+36.1966 67.3093 m
+45 76.1127 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+26.0589 60 m
+31.1346 65.0757 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+36.9243 70.8654 m
+45 78.9411 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+23.2305 60 m
+29.1473 65.9168 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+36.0832 72.8527 m
+43.2304 80 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+20.402 60 m
+27.7655 67.3635 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+34.6365 74.2345 m
+40.402 80 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+20 62.4264 m
+27.0462 69.4725 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+32.5275 74.9539 m
+37.5736 80 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+20 65.2548 m
+34.7452 80 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+20 68.0833 m
+31.9167 80 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+20 70.9117 m
+29.0883 80 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+20 73.7401 m
+26.2599 80 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+20 76.5685 m
+23.4315 80 l
+S
+Q
+q
+0 0 0 RG
+0.18 w
+20 79.397 m
+20.603 80 l
+S
+Q
+q
+0 0 0 RG
+0.5 w
+20 60 m
+45 60 l
+45 80 l
+20 80 l
+20 60 l
+h
+S
+Q
+q
+0 0 0 RG
+0.5 w
+37 70 m
+37 72.7614 34.7614 75 32 75 c
+29.2386 75 27 72.7614 27 70 c
+27 67.2386 29.2386 65 32 65 c
+34.7614 65 37 67.2386 37 70 c
+h
+S
+Q
+EMC
+/OC /MC2 BDC
+q
+0 0 0 RG
+0.25 w
+99.7 100.95 m
+99.7 87.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+179.7 100.95 m
+179.7 87.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+102.7 89.95 m
+132.0625 89.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+176.7 89.95 m
+147.3375 89.95 l
+S
+Q
+q
+0 0 0 rg
+99.7 89.95 m
+102.7 89.45 l
+102.7 90.45 l
+99.7 89.95 l
+h
+f
+Q
+q
+0 0 0 rg
+179.7 89.95 m
+176.7 90.45 l
+176.7 89.45 l
+179.7 89.95 l
+h
+f
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 133.0625 89.075 Tm
+(80.00 \\2610.10) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+98.7 101.95 m
+85.7 101.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+98.7 151.95 m
+85.7 151.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+87.7 104.95 m
+87.7 123.8 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+87.7 148.95 m
+87.7 130.1 l
+S
+Q
+q
+0 0 0 rg
+87.7 101.95 m
+88.2 104.95 l
+87.2 104.95 l
+87.7 101.95 l
+h
+f
+Q
+q
+0 0 0 rg
+87.7 151.95 m
+87.2 148.95 l
+88.2 148.95 l
+87.7 151.95 l
+h
+f
+Q
+q
+0 0 0 rg
+BT
+/F1 2 Tf
+1 0 0 1 85.198 127.4 Tm
+(50.10) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2 Tf
+1 0 0 1 85.198 125.1 Tm
+(49.90) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+99.7 100.95 m
+99.7 79.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+111.7 100.95 m
+111.7 79.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+102.7 81.95 m
+101.5725 81.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+108.7 81.95 m
+109.8275 81.95 l
+S
+Q
+q
+0 0 0 rg
+99.7 81.95 m
+102.7 81.45 l
+102.7 82.45 l
+99.7 81.95 l
+h
+f
+Q
+q
+0 0 0 rg
+111.7 81.95 m
+108.7 82.45 l
+108.7 81.45 l
+111.7 81.95 l
+h
+f
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 102.5725 81.075 Tm
+(12.00) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+99.7 100.95 m
+99.7 71.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+167.7 100.95 m
+167.7 71.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+102.7 73.95 m
+129.5725 73.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+164.7 73.95 m
+137.8275 73.95 l
+S
+Q
+q
+0 0 0 rg
+99.7 73.95 m
+102.7 73.45 l
+102.7 74.45 l
+99.7 73.95 l
+h
+f
+Q
+q
+0 0 0 rg
+167.7 73.95 m
+164.7 74.45 l
+164.7 73.45 l
+167.7 73.95 l
+h
+f
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 130.5725 73.075 Tm
+(68.00) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+168.7 113.95 m
+184.7 113.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+168.7 139.95 m
+184.7 139.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+182.7 116.95 m
+182.7 124.2 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+182.7 136.95 m
+182.7 129.7 l
+S
+Q
+q
+0 0 0 rg
+182.7 113.95 m
+183.2 116.95 l
+182.2 116.95 l
+182.7 113.95 l
+h
+f
+Q
+q
+0 0 0 rg
+182.7 139.95 m
+182.2 136.95 l
+183.2 136.95 l
+182.7 139.95 l
+h
+f
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 179.5725 126.075 Tm
+(26.00) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+170.5284 142.7784 m
+176.1853 148.4353 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+176.1853 148.4353 m
+180.1853 148.4353 l
+S
+Q
+q
+0 0 0 rg
+170.5284 142.7784 m
+173.0033 144.5462 l
+172.2962 145.2533 l
+170.5284 142.7784 l
+h
+f
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 181.1853 147.5603 Tm
+(R4.00) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+108.8716 111.1216 m
+103.2147 105.4647 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+103.2147 105.4647 m
+99.2147 105.4647 l
+S
+Q
+q
+0 0 0 rg
+108.8716 111.1216 m
+106.3967 109.3538 l
+107.1038 108.6467 l
+108.8716 111.1216 l
+h
+f
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 80.0147 104.5897 Tm
+(4X \\3308.00 THRU) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+99.7 145.95 m
+99.7 140.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+105.7 151.95 m
+110.7 151.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+99.7 142.95 m
+100.5149 142.95 101.3261 143.0607 102.1113 143.279 c
+S
+Q
+q
+0 0 0 RG
+0.25 w
+108.371 149.5387 m
+108.5893 150.3239 108.7 151.1351 108.7 151.95 c
+S
+Q
+q
+0 0 0 rg
+99.7 142.95 m
+102.7 142.45 l
+102.7 143.45 l
+99.7 142.95 l
+h
+f
+Q
+q
+0 0 0 rg
+108.7 151.95 m
+108.2 148.95 l
+109.2 148.95 l
+108.7 151.95 l
+h
+f
+Q
+q
+0 0 0 rg
+BT
+/F1 2.5 Tf
+1 0 0 1 102.4365 144.711 Tm
+(90.00\\260) Tj
+ET
+Q
+q
+0 0 0 rg
+139.7 151.95 m
+138.35 155.55 l
+141.05 155.55 l
+139.7 151.95 l
+h
+f
+Q
+q
+0 0 0 RG
+0.25 w
+139.7 155.55 m
+139.7 156.95 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+136.7 156.95 m
+142.7 156.95 l
+142.7 162.95 l
+136.7 162.95 l
+136.7 156.95 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 3.3 Tf
+1 0 0 1 138.5994 158.795 Tm
+(A) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+200 112 m
+234.767 112 l
+234.767 119.8 l
+200 119.8 l
+200 112 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+206.5715 115.9 m
+206.5715 116.7293 205.8993 117.4015 205.07 117.4015 c
+204.2407 117.4015 203.5685 116.7293 203.5685 115.9 c
+203.5685 115.0707 204.2407 114.3985 205.07 114.3985 c
+205.8993 114.3985 206.5715 115.0707 206.5715 115.9 c
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+202.7495 115.9 m
+207.3905 115.9 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+205.07 113.5795 m
+205.07 118.2205 l
+S
+Q
+q
+0 0 0 RG
+0.25 w
+210.14 112 m
+210.14 119.8 l
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 3 Tf
+1 0 0 1 212.537 114.85 Tm
+(\\3300.10) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+224.576 115.9 m
+224.576 116.8113 223.8373 117.55 222.926 117.55 c
+222.0147 117.55 221.276 116.8113 221.276 115.9 c
+221.276 114.9887 222.0147 114.25 222.926 114.25 c
+223.8373 114.25 224.576 114.9887 224.576 115.9 c
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 1.98 Tf
+1 0 0 1 222.1013 115.207 Tm
+(M) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+227.306 112 m
+227.306 119.8 l
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 3 Tf
+1 0 0 1 230.036 114.85 Tm
+(A) Tj
+ET
+Q
+EMC
+/OC /MC3 BDC
+q
+0 0.4 0.8 RG
+0.25 w
+[24 1.5 3 1.5 3 1.5] 0 d
+99.7 101.95 m
+179.7 101.95 l
+179.7 151.95 l
+99.7 151.95 l
+99.7 101.95 l
+h
+S
+Q
+EMC
+q
+0 0 0 RG
+0.2 w
+179.4 198.9 m
+188.4 198.9 l
+188.4 203.9 l
+179.4 203.9 l
+179.4 198.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F2 2.2 Tf
+1 0 0 1 180.8442 200.63 Tm
+(ZONE) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+188.4 198.9 m
+199.2 198.9 l
+199.2 203.9 l
+188.4 203.9 l
+188.4 198.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F2 2.2 Tf
+1 0 0 1 191.5384 200.63 Tm
+(REV) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+199.2 198.9 m
+238.8 198.9 l
+238.8 203.9 l
+199.2 203.9 l
+199.2 198.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F2 2.2 Tf
+1 0 0 1 211.4826 200.63 Tm
+(DESCRIPTION) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+238.8 198.9 m
+253.2 198.9 l
+253.2 203.9 l
+238.8 203.9 l
+238.8 198.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F2 2.2 Tf
+1 0 0 1 243.0058 200.63 Tm
+(DATE) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+253.2 198.9 m
+269.4 198.9 l
+269.4 203.9 l
+253.2 203.9 l
+253.2 198.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F2 2.2 Tf
+1 0 0 1 255.1268 200.63 Tm
+(APPROVED) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+179.4 192.9 m
+188.4 192.9 l
+188.4 198.9 l
+179.4 198.9 l
+179.4 192.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2.2 Tf
+1 0 0 1 182.5547 195.13 Tm
+(B2) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+188.4 192.9 m
+199.2 192.9 l
+199.2 198.9 l
+188.4 198.9 l
+188.4 192.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2.2 Tf
+1 0 0 1 193.0663 195.13 Tm
+(B) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+199.2 192.9 m
+238.8 192.9 l
+238.8 198.9 l
+199.2 198.9 l
+199.2 192.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2.2 Tf
+1 0 0 1 200.5 195.13 Tm
+(Revised hole pattern per ECO-1234) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+238.8 192.9 m
+253.2 192.9 l
+253.2 198.9 l
+238.8 198.9 l
+238.8 192.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2.2 Tf
+1 0 0 1 240.3746 195.13 Tm
+(2026-07-08) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+253.2 192.9 m
+269.4 192.9 l
+269.4 198.9 l
+253.2 198.9 l
+253.2 192.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2.2 Tf
+1 0 0 1 257.7547 195.13 Tm
+(J. DOE) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+179.4 186.9 m
+188.4 186.9 l
+188.4 192.9 l
+179.4 192.9 l
+179.4 186.9 l
+h
+S
+Q
+q
+0 0 0 RG
+0.2 w
+188.4 186.9 m
+199.2 186.9 l
+199.2 192.9 l
+188.4 192.9 l
+188.4 186.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2.2 Tf
+1 0 0 1 193.0663 189.13 Tm
+(A) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+199.2 186.9 m
+238.8 186.9 l
+238.8 192.9 l
+199.2 192.9 l
+199.2 186.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2.2 Tf
+1 0 0 1 200.5 189.13 Tm
+(Initial release) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+238.8 186.9 m
+253.2 186.9 l
+253.2 192.9 l
+238.8 192.9 l
+238.8 186.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2.2 Tf
+1 0 0 1 240.3746 189.13 Tm
+(2026-05-01) Tj
+ET
+Q
+q
+0 0 0 RG
+0.2 w
+253.2 186.9 m
+269.4 186.9 l
+269.4 192.9 l
+253.2 192.9 l
+253.2 186.9 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2.2 Tf
+1 0 0 1 257.7547 189.13 Tm
+(J. DOE) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+79.4 10 m
+269.4 10 l
+269.4 48 l
+79.4 48 l
+79.4 10 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+79.4 40.4 m
+99.35 40.4 l
+99.35 48 l
+79.4 48 l
+79.4 40.4 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+99.35 40.4 m
+137.255 40.4 l
+137.255 48 l
+99.35 48 l
+99.35 40.4 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2 Tf
+1 0 0 1 115.4135 43.5 Tm
+(NAME) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+137.255 40.4 m
+159.2 40.4 l
+159.2 48 l
+137.255 48 l
+137.255 40.4 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 2 Tf
+1 0 0 1 145.5605 43.5 Tm
+(DATE) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+79.4 32.8 m
+99.35 32.8 l
+99.35 40.4 l
+79.4 40.4 l
+79.4 32.8 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 1.9 Tf
+1 0 0 1 85.7869 35.935 Tm
+(DRAWN) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+99.35 32.8 m
+137.255 32.8 l
+137.255 40.4 l
+99.35 40.4 l
+99.35 32.8 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F2 3 Tf
+1 0 0 1 111.8015 35.1 Tm
+(S. RICHS) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+137.255 32.8 m
+159.2 32.8 l
+159.2 40.4 l
+137.255 40.4 l
+137.255 32.8 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F2 3 Tf
+1 0 0 1 140.5565 35.1 Tm
+(2026-07-08) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+79.4 25.2 m
+99.35 25.2 l
+99.35 32.8 l
+79.4 32.8 l
+79.4 25.2 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 1.9 Tf
+1 0 0 1 84.7305 28.335 Tm
+(CHECKED) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+99.35 25.2 m
+137.255 25.2 l
+137.255 32.8 l
+99.35 32.8 l
+99.35 25.2 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+137.255 25.2 m
+159.2 25.2 l
+159.2 32.8 l
+137.255 32.8 l
+137.255 25.2 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+79.4 17.6 m
+99.35 17.6 l
+99.35 25.2 l
+79.4 25.2 l
+79.4 17.6 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 1.9 Tf
+1 0 0 1 84.2013 20.735 Tm
+(ENG APPR.) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+99.35 17.6 m
+137.255 17.6 l
+137.255 25.2 l
+99.35 25.2 l
+99.35 17.6 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+137.255 17.6 m
+159.2 17.6 l
+159.2 25.2 l
+137.255 25.2 l
+137.255 17.6 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+79.4 10 m
+99.35 10 l
+99.35 17.6 l
+79.4 17.6 l
+79.4 10 l
+h
+S
+Q
+q
+0 0 0 rg
+BT
+/F1 1.9 Tf
+1 0 0 1 84.1491 13.135 Tm
+(MFG APPR.) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+99.35 10 m
+137.255 10 l
+137.255 17.6 l
+99.35 17.6 l
+99.35 10 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+137.255 10 m
+159.2 10 l
+159.2 17.6 l
+137.255 17.6 l
+137.255 10 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+159.2 40 m
+176.832 40 l
+176.832 48 l
+159.2 48 l
+159.2 40 l
+h
+S
+Q
+q
+0.3333 0.3333 0.3333 rg
+BT
+/F1 2 Tf
+1 0 0 1 160.5 45.7 Tm
+(SIZE) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 3 Tf
+1 0 0 1 166.933 42.3 Tm
+(A) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+176.832 40 m
+248.462 40 l
+248.462 48 l
+176.832 48 l
+176.832 40 l
+h
+S
+Q
+q
+0.3333 0.3333 0.3333 rg
+BT
+/F1 2 Tf
+1 0 0 1 178.132 45.7 Tm
+(DWG NO) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 3 Tf
+1 0 0 1 205.2295 42.3 Tm
+(DRW-1000) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+248.462 40 m
+269.4 40 l
+269.4 48 l
+248.462 48 l
+248.462 40 l
+h
+S
+Q
+q
+0.3333 0.3333 0.3333 rg
+BT
+/F1 2 Tf
+1 0 0 1 249.762 45.7 Tm
+(REV) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 3 Tf
+1 0 0 1 257.848 42.3 Tm
+(B) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+159.2 26 m
+269.4 26 l
+269.4 40 l
+159.2 40 l
+159.2 26 l
+h
+S
+Q
+q
+0.3333 0.3333 0.3333 rg
+BT
+/F1 2 Tf
+1 0 0 1 160.5 37.7 Tm
+(TITLE) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 3.9 Tf
+1 0 0 1 193.0684 28.3 Tm
+(BRACKET, MOUNTING) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+159.2 18 m
+186.75 18 l
+186.75 26 l
+159.2 26 l
+159.2 18 l
+h
+S
+Q
+q
+0.3333 0.3333 0.3333 rg
+BT
+/F1 2 Tf
+1 0 0 1 160.5 23.7 Tm
+(MATERIAL) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 3 Tf
+1 0 0 1 164.9725 20.3 Tm
+(AL 6061-T6) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+186.75 18 m
+214.3 18 l
+214.3 26 l
+186.75 26 l
+186.75 18 l
+h
+S
+Q
+q
+0.3333 0.3333 0.3333 rg
+BT
+/F1 2 Tf
+1 0 0 1 188.05 23.7 Tm
+(FINISH) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 3 Tf
+1 0 0 1 187.775 20.3 Tm
+(ANODIZE, CLEAR) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+214.3 18 m
+248.462 18 l
+248.462 26 l
+214.3 26 l
+214.3 18 l
+h
+S
+Q
+q
+0.3333 0.3333 0.3333 rg
+BT
+/F1 2 Tf
+1 0 0 1 215.6 23.7 Tm
+(TOLERANCES) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.1 Tf
+1 0 0 1 215.6 20.97 Tm
+(X.XX = \\2610.01) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 2.1 Tf
+1 0 0 1 215.6 18.24 Tm
+(ANGLES = \\2610.5\\260) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+248.462 18 m
+269.4 18 l
+269.4 26 l
+248.462 26 l
+248.462 18 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+261.531 21.5 m
+261.531 22.9359 260.3669 24.1 258.931 24.1 c
+257.4951 24.1 256.331 22.9359 256.331 21.5 c
+256.331 20.0641 257.4951 18.9 258.931 18.9 c
+260.3669 18.9 261.531 20.0641 261.531 21.5 c
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+260.231 21.5 m
+260.231 22.218 259.649 22.8 258.931 22.8 c
+258.213 22.8 257.631 22.218 257.631 21.5 c
+257.631 20.782 258.213 20.2 258.931 20.2 c
+259.649 20.2 260.231 20.782 260.231 21.5 c
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+262.571 20.2 m
+262.571 22.8 l
+269.071 24.1 l
+269.071 18.9 l
+262.571 20.2 l
+h
+S
+Q
+q
+0 0 0 RG
+0.25 w
+159.2 10 m
+214.3 10 l
+214.3 18 l
+159.2 18 l
+159.2 10 l
+h
+S
+Q
+q
+0.3333 0.3333 0.3333 rg
+BT
+/F1 2 Tf
+1 0 0 1 160.5 15.7 Tm
+(SCALE) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 3 Tf
+1 0 0 1 184.5825 12.3 Tm
+(1:1) Tj
+ET
+Q
+q
+0 0 0 RG
+0.25 w
+214.3 10 m
+269.4 10 l
+269.4 18 l
+214.3 18 l
+214.3 10 l
+h
+S
+Q
+q
+0.3333 0.3333 0.3333 rg
+BT
+/F1 2 Tf
+1 0 0 1 215.6 15.7 Tm
+(SHEET) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F2 3 Tf
+1 0 0 1 237.2645 12.3 Tm
+(1 OF 2) Tj
+ET
+Q
+
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000126 00000 n 
+0000000183 00000 n 
+0000000370 00000 n 
+0000000467 00000 n 
+0000000569 00000 n 
+0000000618 00000 n 
+0000000669 00000 n 
+0000000722 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+17587
+%%EOF"
+`;
+
+exports[`visual regression: basic-sheet example > sheet 1 (overview) SVG output matches its snapshot 1`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="279.4mm" height="215.9mm" viewBox="0 0 279.4 215.9">
+<g transform="translate(0, 215.9) scale(1, -1)">
+<path d="M 10 10 L 269.4 10 L 269.4 205.9 L 10 205.9 L 10 10 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 61.88 205.9 L 61.88 215.9" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 61.88 0 L 61.88 10" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 113.76 205.9 L 113.76 215.9" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 113.76 0 L 113.76 10" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 165.64 205.9 L 165.64 215.9" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 165.64 0 L 165.64 10" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 217.52 205.9 L 217.52 215.9" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 217.52 0 L 217.52 10" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 0 58.975 L 10 58.975" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 269.4 58.975 L 279.4 58.975" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 0 107.95 L 10 107.95" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 269.4 107.95 L 279.4 107.95" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 0 156.925 L 10 156.925" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 269.4 156.925 L 279.4 156.925" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(35.94 210.025) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">1</text></g>
+<g transform="translate(35.94 4.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">1</text></g>
+<g transform="translate(87.82 210.025) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">2</text></g>
+<g transform="translate(87.82 4.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">2</text></g>
+<g transform="translate(139.7 210.025) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">3</text></g>
+<g transform="translate(139.7 4.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">3</text></g>
+<g transform="translate(191.58 210.025) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">4</text></g>
+<g transform="translate(191.58 4.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">4</text></g>
+<g transform="translate(243.46 210.025) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">5</text></g>
+<g transform="translate(243.46 4.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">5</text></g>
+<g transform="translate(5 180.5375) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">A</text></g>
+<g transform="translate(274.4 180.5375) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">A</text></g>
+<g transform="translate(5 131.5625) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">B</text></g>
+<g transform="translate(274.4 131.5625) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">B</text></g>
+<g transform="translate(5 82.5875) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">C</text></g>
+<g transform="translate(274.4 82.5875) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">C</text></g>
+<g transform="translate(5 33.6125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">D</text></g>
+<g transform="translate(274.4 33.6125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">D</text></g>
+<g id="geometry" class="layer" data-layer="geometry">
+<path d="M 105.7 101.95 L 173.7 101.95 A 6 6 0 0 1 179.7 107.95 L 179.7 145.95 A 6 6 0 0 1 173.7 151.95 L 105.7 151.95 A 6 6 0 0 1 99.7 145.95 L 99.7 107.95 A 6 6 0 0 1 105.7 101.95 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 124.7 118.95 L 154.7 118.95 L 154.7 134.95 L 124.7 134.95 L 124.7 118.95 Z" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="3,1.5" />
+<path d="M 115.7 113.95 A 4 4 0 0 1 107.7 113.95 A 4 4 0 0 1 115.7 113.95 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 105.2 113.95 L 118.2 113.95" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 111.7 107.45 L 111.7 120.45" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 171.7 113.95 A 4 4 0 0 1 163.7 113.95 A 4 4 0 0 1 171.7 113.95 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 161.2 113.95 L 174.2 113.95" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 167.7 107.45 L 167.7 120.45" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 115.7 139.95 A 4 4 0 0 1 107.7 139.95 A 4 4 0 0 1 115.7 139.95 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 105.2 139.95 L 118.2 139.95" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 111.7 133.45 L 111.7 146.45" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 171.7 139.95 A 4 4 0 0 1 163.7 139.95 A 4 4 0 0 1 171.7 139.95 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 161.2 139.95 L 174.2 139.95" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 167.7 133.45 L 167.7 146.45" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 43.02944 60 L 45 61.97056" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 40.20101 60 L 45 64.79899" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 37.37258 60 L 45 67.62742" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 34.54416 60 L 45 70.45584" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 31.71573 60 L 45 73.28427" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 28.8873 60 L 34.69071 65.80341" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 36.19659 67.30929 L 45 76.1127" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 26.05887 60 L 31.13459 65.07571" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 36.92429 70.86541 L 45 78.94113" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 23.23045 60 L 29.14729 65.91684" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 36.08316 72.85271 L 43.23045 80" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20.40202 60 L 27.76548 67.36346" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 34.63654 74.23452 L 40.40202 80" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 62.42641 L 27.04615 69.47255" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 32.52745 74.95385 L 37.57359 80" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 65.25483 L 34.74517 80" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 68.08326 L 31.91674 80" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 70.91169 L 29.08831 80" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 73.74012 L 26.25988 80" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 76.56854 L 23.43146 80" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 79.39697 L 20.60303 80" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 20 60 L 45 60 L 45 80 L 20 80 L 20 60 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 37 70 A 5 5 0 0 1 27 70 A 5 5 0 0 1 37 70 Z" fill="none" stroke="black" stroke-width="0.5" />
+</g>
+<g id="dimensions" class="layer" data-layer="dimensions">
+<path d="M 99.7 100.95 L 99.7 87.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 179.7 100.95 L 179.7 87.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 102.7 89.95 L 132.0625 89.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 176.7 89.95 L 147.3375 89.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 99.7 89.95 L 102.7 89.45 L 102.7 90.45 L 99.7 89.95 Z" fill="black" />
+<path d="M 179.7 89.95 L 176.7 90.45 L 176.7 89.45 L 179.7 89.95 Z" fill="black" />
+<g transform="translate(139.7 89.075) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">80.00 ±0.10</text></g>
+<path d="M 98.7 101.95 L 85.7 101.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 98.7 151.95 L 85.7 151.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 87.7 104.95 L 87.7 123.8" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 87.7 148.95 L 87.7 130.1" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 87.7 101.95 L 88.2 104.95 L 87.2 104.95 L 87.7 101.95 Z" fill="black" />
+<path d="M 87.7 151.95 L 87.2 148.95 L 88.2 148.95 L 87.7 151.95 Z" fill="black" />
+<g transform="translate(87.7 127.4) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">50.10</text></g>
+<g transform="translate(87.7 125.1) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">49.90</text></g>
+<path d="M 99.7 100.95 L 99.7 79.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 111.7 100.95 L 111.7 79.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 102.7 81.95 L 101.5725 81.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 108.7 81.95 L 109.8275 81.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 99.7 81.95 L 102.7 81.45 L 102.7 82.45 L 99.7 81.95 Z" fill="black" />
+<path d="M 111.7 81.95 L 108.7 82.45 L 108.7 81.45 L 111.7 81.95 Z" fill="black" />
+<g transform="translate(105.7 81.075) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">12.00</text></g>
+<path d="M 99.7 100.95 L 99.7 71.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 167.7 100.95 L 167.7 71.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 102.7 73.95 L 129.5725 73.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 164.7 73.95 L 137.8275 73.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 99.7 73.95 L 102.7 73.45 L 102.7 74.45 L 99.7 73.95 Z" fill="black" />
+<path d="M 167.7 73.95 L 164.7 74.45 L 164.7 73.45 L 167.7 73.95 Z" fill="black" />
+<g transform="translate(133.7 73.075) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">68.00</text></g>
+<path d="M 168.7 113.95 L 184.7 113.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 168.7 139.95 L 184.7 139.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 182.7 116.95 L 182.7 124.2" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 182.7 136.95 L 182.7 129.7" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 182.7 113.95 L 183.2 116.95 L 182.2 116.95 L 182.7 113.95 Z" fill="black" />
+<path d="M 182.7 139.95 L 182.2 136.95 L 183.2 136.95 L 182.7 139.95 Z" fill="black" />
+<g transform="translate(182.7 126.075) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">26.00</text></g>
+<path d="M 170.52843 142.77843 L 176.18528 148.43528" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 176.18528 148.43528 L 180.18528 148.43528" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 170.52843 142.77843 L 173.0033 144.54619 L 172.29619 145.2533 L 170.52843 142.77843 Z" fill="black" />
+<g transform="translate(181.18528 147.56028) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">R4.00</text></g>
+<path d="M 108.87157 111.12157 L 103.21472 105.46472" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 103.21472 105.46472 L 99.21472 105.46472" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 108.87157 111.12157 L 106.3967 109.35381 L 107.10381 108.6467 L 108.87157 111.12157 Z" fill="black" />
+<g transform="translate(98.21472 104.58972) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="end" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">4X ⌀8.00 THRU</text></g>
+<path d="M 99.7 145.95 L 99.7 140.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 105.7 151.95 L 110.7 151.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 99.7 142.95 A 9 9 0 0 1 102.11126 143.27902" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 108.37098 149.53874 A 9 9 0 0 1 108.7 151.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 99.7 142.95 L 102.7 142.45 L 102.7 143.45 L 99.7 142.95 Z" fill="black" />
+<path d="M 108.7 151.95 L 108.2 148.95 L 109.2 148.95 L 108.7 151.95 Z" fill="black" />
+<g transform="translate(106.06396 144.71104) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">90.00°</text></g>
+<path d="M 139.7 151.95 L 138.35 155.55 L 141.05 155.55 L 139.7 151.95 Z" fill="black" />
+<path d="M 139.7 155.55 L 139.7 156.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 136.7 156.95 L 142.7 156.95 L 142.7 162.95 L 136.7 162.95 L 136.7 156.95 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(139.7 158.795) scale(1,-1)"><text x="0" y="0" font-size="3.3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">A</text></g>
+<path d="M 200 112 L 234.767 112 L 234.767 119.8 L 200 119.8 L 200 112 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 206.5715 115.9 A 1.5015 1.5015 0 0 1 203.5685 115.9 A 1.5015 1.5015 0 0 1 206.5715 115.9 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 202.7495 115.9 L 207.3905 115.9" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 205.07 113.5795 L 205.07 118.2205" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 210.14 112 L 210.14 119.8" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(216.623 114.85) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">⌀0.10</text></g>
+<path d="M 224.576 115.9 A 1.65 1.65 0 0 1 221.276 115.9 A 1.65 1.65 0 0 1 224.576 115.9 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(222.926 115.207) scale(1,-1)"><text x="0" y="0" font-size="1.98" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">M</text></g>
+<path d="M 227.306 112 L 227.306 119.8" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(231.0365 114.85) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">A</text></g>
+</g>
+<g id="construction" class="layer" data-layer="construction" style="display:none">
+<path d="M 99.7 101.95 L 179.7 101.95 L 179.7 151.95 L 99.7 151.95 L 99.7 101.95 Z" fill="none" stroke="#0066cc" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5,3,1.5" />
+</g>
+<path d="M 179.4 198.9 L 188.4 198.9 L 188.4 203.9 L 179.4 203.9 L 179.4 198.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(183.9 200.63) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ZONE</text></g>
+<path d="M 188.4 198.9 L 199.2 198.9 L 199.2 203.9 L 188.4 203.9 L 188.4 198.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(193.8 200.63) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">REV</text></g>
+<path d="M 199.2 198.9 L 238.8 198.9 L 238.8 203.9 L 199.2 203.9 L 199.2 198.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(219 200.63) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">DESCRIPTION</text></g>
+<path d="M 238.8 198.9 L 253.2 198.9 L 253.2 203.9 L 238.8 203.9 L 238.8 198.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(246 200.63) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">DATE</text></g>
+<path d="M 253.2 198.9 L 269.4 198.9 L 269.4 203.9 L 253.2 203.9 L 253.2 198.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(261.3 200.63) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">APPROVED</text></g>
+<path d="M 179.4 192.9 L 188.4 192.9 L 188.4 198.9 L 179.4 198.9 L 179.4 192.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(183.9 195.13) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">B2</text></g>
+<path d="M 188.4 192.9 L 199.2 192.9 L 199.2 198.9 L 188.4 198.9 L 188.4 192.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(193.8 195.13) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">B</text></g>
+<path d="M 199.2 192.9 L 238.8 192.9 L 238.8 198.9 L 199.2 198.9 L 199.2 192.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(200.5 195.13) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">Revised hole pattern per ECO-1234</text></g>
+<path d="M 238.8 192.9 L 253.2 192.9 L 253.2 198.9 L 238.8 198.9 L 238.8 192.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(246 195.13) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">2026-07-08</text></g>
+<path d="M 253.2 192.9 L 269.4 192.9 L 269.4 198.9 L 253.2 198.9 L 253.2 192.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(261.3 195.13) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">J. DOE</text></g>
+<path d="M 179.4 186.9 L 188.4 186.9 L 188.4 192.9 L 179.4 192.9 L 179.4 186.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 188.4 186.9 L 199.2 186.9 L 199.2 192.9 L 188.4 192.9 L 188.4 186.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(193.8 189.13) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">A</text></g>
+<path d="M 199.2 186.9 L 238.8 186.9 L 238.8 192.9 L 199.2 192.9 L 199.2 186.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(200.5 189.13) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">Initial release</text></g>
+<path d="M 238.8 186.9 L 253.2 186.9 L 253.2 192.9 L 238.8 192.9 L 238.8 186.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(246 189.13) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">2026-05-01</text></g>
+<path d="M 253.2 186.9 L 269.4 186.9 L 269.4 192.9 L 253.2 192.9 L 253.2 186.9 Z" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(261.3 189.13) scale(1,-1)"><text x="0" y="0" font-size="2.2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">J. DOE</text></g>
+<path d="M 79.4 10 L 269.4 10 L 269.4 48 L 79.4 48 L 79.4 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 79.4 40.4 L 99.35 40.4 L 99.35 48 L 79.4 48 L 79.4 40.4 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 99.35 40.4 L 137.255 40.4 L 137.255 48 L 99.35 48 L 99.35 40.4 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(118.3025 43.5) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">NAME</text></g>
+<path d="M 137.255 40.4 L 159.2 40.4 L 159.2 48 L 137.255 48 L 137.255 40.4 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(148.2275 43.5) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">DATE</text></g>
+<path d="M 79.4 32.8 L 99.35 32.8 L 99.35 40.4 L 79.4 40.4 L 79.4 32.8 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 35.935) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">DRAWN</text></g>
+<path d="M 99.35 32.8 L 137.255 32.8 L 137.255 40.4 L 99.35 40.4 L 99.35 32.8 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(118.3025 35.1) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">S. RICHS</text></g>
+<path d="M 137.255 32.8 L 159.2 32.8 L 159.2 40.4 L 137.255 40.4 L 137.255 32.8 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(148.2275 35.1) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">2026-07-08</text></g>
+<path d="M 79.4 25.2 L 99.35 25.2 L 99.35 32.8 L 79.4 32.8 L 79.4 25.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 28.335) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">CHECKED</text></g>
+<path d="M 99.35 25.2 L 137.255 25.2 L 137.255 32.8 L 99.35 32.8 L 99.35 25.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 137.255 25.2 L 159.2 25.2 L 159.2 32.8 L 137.255 32.8 L 137.255 25.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 79.4 17.6 L 99.35 17.6 L 99.35 25.2 L 79.4 25.2 L 79.4 17.6 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 20.735) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">ENG APPR.</text></g>
+<path d="M 99.35 17.6 L 137.255 17.6 L 137.255 25.2 L 99.35 25.2 L 99.35 17.6 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 137.255 17.6 L 159.2 17.6 L 159.2 25.2 L 137.255 25.2 L 137.255 17.6 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 79.4 10 L 99.35 10 L 99.35 17.6 L 79.4 17.6 L 79.4 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 13.135) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">MFG APPR.</text></g>
+<path d="M 99.35 10 L 137.255 10 L 137.255 17.6 L 99.35 17.6 L 99.35 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 137.255 10 L 159.2 10 L 159.2 17.6 L 137.255 17.6 L 137.255 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 159.2 40 L 176.832 40 L 176.832 48 L 159.2 48 L 159.2 40 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 45.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SIZE</text></g>
+<g transform="translate(168.016 42.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">A</text></g>
+<path d="M 176.832 40 L 248.462 40 L 248.462 48 L 176.832 48 L 176.832 40 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(178.132 45.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">DWG NO</text></g>
+<g transform="translate(212.647 42.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">DRW-1000</text></g>
+<path d="M 248.462 40 L 269.4 40 L 269.4 48 L 248.462 48 L 248.462 40 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(249.762 45.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">REV</text></g>
+<g transform="translate(258.931 42.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">B</text></g>
+<path d="M 159.2 26 L 269.4 26 L 269.4 40 L 159.2 40 L 159.2 26 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 37.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">TITLE</text></g>
+<g transform="translate(214.3 28.3) scale(1,-1)"><text x="0" y="0" font-size="3.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">BRACKET, MOUNTING</text></g>
+<path d="M 159.2 18 L 186.75 18 L 186.75 26 L 159.2 26 L 159.2 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 23.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">MATERIAL</text></g>
+<g transform="translate(172.975 20.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">AL 6061-T6</text></g>
+<path d="M 186.75 18 L 214.3 18 L 214.3 26 L 186.75 26 L 186.75 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(188.05 23.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">FINISH</text></g>
+<g transform="translate(200.525 20.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ANODIZE, CLEAR</text></g>
+<path d="M 214.3 18 L 248.462 18 L 248.462 26 L 214.3 26 L 214.3 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(215.6 23.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">TOLERANCES</text></g>
+<g transform="translate(215.6 20.97) scale(1,-1)"><text x="0" y="0" font-size="2.1" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">X.XX = ±0.01</text></g>
+<g transform="translate(215.6 18.24) scale(1,-1)"><text x="0" y="0" font-size="2.1" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">ANGLES = ±0.5°</text></g>
+<path d="M 248.462 18 L 269.4 18 L 269.4 26 L 248.462 26 L 248.462 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 261.531 21.5 A 2.6 2.6 0 0 1 256.331 21.5 A 2.6 2.6 0 0 1 261.531 21.5 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 260.231 21.5 A 1.3 1.3 0 0 1 257.631 21.5 A 1.3 1.3 0 0 1 260.231 21.5 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 262.571 20.2 L 262.571 22.8 L 269.071 24.1 L 269.071 18.9 L 262.571 20.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 159.2 10 L 214.3 10 L 214.3 18 L 159.2 18 L 159.2 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 15.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SCALE</text></g>
+<g transform="translate(186.75 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">1:1</text></g>
+<path d="M 214.3 10 L 269.4 10 L 269.4 18 L 214.3 18 L 214.3 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(215.6 15.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SHEET</text></g>
+<g transform="translate(241.85 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">1 OF 2</text></g>
+</g>
+</svg>
+"
+`;
+
+exports[`visual regression: basic-sheet example > sheet 2 (pocket detail) SVG output matches its snapshot 1`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="279.4mm" height="215.9mm" viewBox="0 0 279.4 215.9">
+<g transform="translate(0, 215.9) scale(1, -1)">
+<path d="M 10 10 L 269.4 10 L 269.4 205.9 L 10 205.9 L 10 10 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 61.88 205.9 L 61.88 215.9" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 61.88 0 L 61.88 10" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 113.76 205.9 L 113.76 215.9" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 113.76 0 L 113.76 10" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 165.64 205.9 L 165.64 215.9" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 165.64 0 L 165.64 10" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 217.52 205.9 L 217.52 215.9" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 217.52 0 L 217.52 10" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 0 58.975 L 10 58.975" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 269.4 58.975 L 279.4 58.975" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 0 107.95 L 10 107.95" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 269.4 107.95 L 279.4 107.95" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 0 156.925 L 10 156.925" fill="none" stroke="black" stroke-width="0.2" />
+<path d="M 269.4 156.925 L 279.4 156.925" fill="none" stroke="black" stroke-width="0.2" />
+<g transform="translate(35.94 210.025) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">1</text></g>
+<g transform="translate(35.94 4.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">1</text></g>
+<g transform="translate(87.82 210.025) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">2</text></g>
+<g transform="translate(87.82 4.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">2</text></g>
+<g transform="translate(139.7 210.025) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">3</text></g>
+<g transform="translate(139.7 4.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">3</text></g>
+<g transform="translate(191.58 210.025) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">4</text></g>
+<g transform="translate(191.58 4.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">4</text></g>
+<g transform="translate(243.46 210.025) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">5</text></g>
+<g transform="translate(243.46 4.125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">5</text></g>
+<g transform="translate(5 180.5375) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">A</text></g>
+<g transform="translate(274.4 180.5375) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">A</text></g>
+<g transform="translate(5 131.5625) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">B</text></g>
+<g transform="translate(274.4 131.5625) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">B</text></g>
+<g transform="translate(5 82.5875) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">C</text></g>
+<g transform="translate(274.4 82.5875) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">C</text></g>
+<g transform="translate(5 33.6125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">D</text></g>
+<g transform="translate(274.4 33.6125) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">D</text></g>
+<path d="M 109.7 110.95 L 169.7 110.95 L 169.7 142.95 L 109.7 142.95 L 109.7 110.95 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 109.7 109.95 L 109.7 96.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 169.7 109.95 L 169.7 96.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 112.7 98.95 L 135.5725 98.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 166.7 98.95 L 143.8275 98.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 109.7 98.95 L 112.7 98.45 L 112.7 99.45 L 109.7 98.95 Z" fill="black" />
+<path d="M 169.7 98.95 L 166.7 99.45 L 166.7 98.45 L 169.7 98.95 Z" fill="black" />
+<g transform="translate(139.7 98.075) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">30.00</text></g>
+<path d="M 110.7 110.95 L 123.7 110.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 110.7 142.95 L 123.7 142.95" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 121.7 113.95 L 121.7 124.2" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 121.7 139.95 L 121.7 129.7" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 121.7 110.95 L 122.2 113.95 L 121.2 113.95 L 121.7 110.95 Z" fill="black" />
+<path d="M 121.7 142.95 L 121.2 139.95 L 122.2 139.95 L 121.7 142.95 Z" fill="black" />
+<g transform="translate(121.7 126.075) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">16.00</text></g>
+<path d="M 139.7 142.95 L 143.7 149.8782" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 143.7 149.8782 L 147.7 149.8782" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 139.7 142.95 L 141.63301 145.29808 L 140.76699 145.79808 L 139.7 142.95 Z" fill="black" />
+<g transform="translate(148.7 149.0032) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">X 3.00 DEEP</text></g>
+<path d="M 147.7 187.95 A 8 8 0 0 1 131.7 187.95 A 8 8 0 0 1 147.7 187.95 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 128.7 187.95 L 150.7 187.95" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 139.7 176.95 L 139.7 198.95" fill="none" stroke="black" stroke-width="0.25" stroke-dasharray="24,1.5,3,1.5" />
+<path d="M 139.7 187.95 L 145.82836 193.0923" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 145.82836 193.0923 L 149.82836 193.0923" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 139.7 187.95 L 142.31953 189.49534 L 141.67674 190.26139 L 139.7 187.95 Z" fill="black" />
+<g transform="translate(150.82836 192.2173) scale(1,-1)"><text x="0" y="0" font-size="2.5" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">⌀16 THRU, ⌴⌀14 X 5 DEEP</text></g>
+<path d="M 79.4 10 L 269.4 10 L 269.4 48 L 79.4 48 L 79.4 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 79.4 40.4 L 99.35 40.4 L 99.35 48 L 79.4 48 L 79.4 40.4 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 99.35 40.4 L 137.255 40.4 L 137.255 48 L 99.35 48 L 99.35 40.4 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(118.3025 43.5) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">NAME</text></g>
+<path d="M 137.255 40.4 L 159.2 40.4 L 159.2 48 L 137.255 48 L 137.255 40.4 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(148.2275 43.5) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">DATE</text></g>
+<path d="M 79.4 32.8 L 99.35 32.8 L 99.35 40.4 L 79.4 40.4 L 79.4 32.8 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 35.935) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">DRAWN</text></g>
+<path d="M 99.35 32.8 L 137.255 32.8 L 137.255 40.4 L 99.35 40.4 L 99.35 32.8 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(118.3025 35.1) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">S. RICHS</text></g>
+<path d="M 137.255 32.8 L 159.2 32.8 L 159.2 40.4 L 137.255 40.4 L 137.255 32.8 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(148.2275 35.1) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">2026-07-08</text></g>
+<path d="M 79.4 25.2 L 99.35 25.2 L 99.35 32.8 L 79.4 32.8 L 79.4 25.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 28.335) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">CHECKED</text></g>
+<path d="M 99.35 25.2 L 137.255 25.2 L 137.255 32.8 L 99.35 32.8 L 99.35 25.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 137.255 25.2 L 159.2 25.2 L 159.2 32.8 L 137.255 32.8 L 137.255 25.2 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 79.4 17.6 L 99.35 17.6 L 99.35 25.2 L 79.4 25.2 L 79.4 17.6 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 20.735) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">ENG APPR.</text></g>
+<path d="M 99.35 17.6 L 137.255 17.6 L 137.255 25.2 L 99.35 25.2 L 99.35 17.6 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 137.255 17.6 L 159.2 17.6 L 159.2 25.2 L 137.255 25.2 L 137.255 17.6 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 79.4 10 L 99.35 10 L 99.35 17.6 L 79.4 17.6 L 79.4 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(89.375 13.135) scale(1,-1)"><text x="0" y="0" font-size="1.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="normal">MFG APPR.</text></g>
+<path d="M 99.35 10 L 137.255 10 L 137.255 17.6 L 99.35 17.6 L 99.35 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 137.255 10 L 159.2 10 L 159.2 17.6 L 137.255 17.6 L 137.255 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 159.2 40 L 176.832 40 L 176.832 48 L 159.2 48 L 159.2 40 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 45.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SIZE</text></g>
+<g transform="translate(168.016 42.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">A</text></g>
+<path d="M 176.832 40 L 248.462 40 L 248.462 48 L 176.832 48 L 176.832 40 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(178.132 45.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">DWG NO</text></g>
+<g transform="translate(212.647 42.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">DRW-1000</text></g>
+<path d="M 248.462 40 L 269.4 40 L 269.4 48 L 248.462 48 L 248.462 40 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(249.762 45.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">REV</text></g>
+<g transform="translate(258.931 42.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">B</text></g>
+<path d="M 159.2 26 L 269.4 26 L 269.4 40 L 159.2 40 L 159.2 26 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 37.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">TITLE</text></g>
+<g transform="translate(214.3 28.3) scale(1,-1)"><text x="0" y="0" font-size="3.9" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">BRACKET, MOUNTING - POCKET DETAIL</text></g>
+<path d="M 159.2 18 L 186.75 18 L 186.75 26 L 159.2 26 L 159.2 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 23.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">MATERIAL</text></g>
+<g transform="translate(172.975 20.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">AL 6061-T6</text></g>
+<path d="M 186.75 18 L 214.3 18 L 214.3 26 L 186.75 26 L 186.75 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(188.05 23.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">FINISH</text></g>
+<g transform="translate(200.525 20.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ANODIZE, CLEAR</text></g>
+<path d="M 214.3 18 L 248.462 18 L 248.462 26 L 214.3 26 L 214.3 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(215.6 23.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">TOLERANCES</text></g>
+<path d="M 248.462 18 L 269.4 18 L 269.4 26 L 248.462 26 L 248.462 18 Z" fill="none" stroke="black" stroke-width="0.25" />
+<path d="M 159.2 10 L 214.3 10 L 214.3 18 L 159.2 18 L 159.2 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(160.5 15.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SCALE</text></g>
+<g transform="translate(186.75 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">2:1</text></g>
+<path d="M 214.3 10 L 269.4 10 L 269.4 18 L 214.3 18 L 214.3 10 Z" fill="none" stroke="black" stroke-width="0.25" />
+<g transform="translate(215.6 15.7) scale(1,-1)"><text x="0" y="0" font-size="2" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">SHEET</text></g>
+<g transform="translate(241.85 12.3) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="middle" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">2 OF 2</text></g>
+</g>
+</svg>
+"
+`;

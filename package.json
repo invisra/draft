@@ -1,0 +1,81 @@
+{
+  "name": "@invisra/draft",
+  "version": "0.1.1",
+  "description": "A TypeScript library for generating engineering-style SVG drawing sheets.",
+  "keywords": [
+    "cad",
+    "drafting",
+    "engineering-drawing",
+    "technical-drawing",
+    "blueprint",
+    "svg",
+    "dxf",
+    "pdf",
+    "gdt",
+    "dimensioning",
+    "typescript"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "author": "Invisra",
+  "homepage": "https://github.com/invisra/draft#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invisra/draft.git"
+  },
+  "bugs": {
+    "url": "https://github.com/invisra/draft/issues"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "FEATURES.md",
+    "llms.txt"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm test && npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "example": "tsx examples/basic-sheet.ts",
+    "example:hatches": "tsx examples/material-hatches.ts",
+    "example:inch": "tsx examples/inch-sheet.ts",
+    "example:construction": "tsx examples/construction.ts",
+    "example:scaled": "tsx examples/scaled-view.ts",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "eslint": "^9.9.0",
+    "tsup": "^8.2.4",
+    "tsx": "^4.19.0",
+    "typedoc": "^0.28.20",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^4.1.11"
+  },
+  "overrides": {
+    "esbuild": "^0.28.2"
+  }
+}

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="279.4mm" height="215.9mm" viewBox="0 0 279.4 215.9">
+<g transform="translate(0, 215.9) scale(1, -1)">
+<path d="M 10 10 L 269.4 10 L 269.4 205.9 L 10 205.9 L 10 10 Z" fill="none" stroke="black" stroke-width="0.5" />
+<path d="M 64.58821 127.45 L 67.2 130.06179" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 60.09808 127.45 L 67.2 134.55192" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 55.60795 127.45 L 67.2 139.04205" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 51.11782 127.45 L 67.2 143.53218" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 46.62769 127.45 L 67.2 148.02231" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 42.13757 127.45 L 67.2 152.51243" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 37.64744 127.45 L 67.2 157.00256" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 33.15731 127.45 L 63.15731 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 28.66718 127.45 L 58.66718 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 24.17705 127.45 L 54.17705 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 19.68693 127.45 L 49.68693 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 129.4532 L 45.1968 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 133.94333 L 40.70667 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 138.43346 L 36.21654 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 142.92359 L 31.72641 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 147.41371 L 27.23629 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 151.90384 L 22.74616 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 156.39397 L 18.25603 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 127.45 L 67.2 127.45 L 67.2 157.45 L 17.2 157.45 L 17.2 127.45 Z" fill="none" stroke="black" stroke-width="0.5" />
+<g transform="translate(17.2 123.45) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ANSI31</text></g>
+<g transform="translate(17.2 119.95) scale(1,-1)"><text x="0" y="0" font-size="2.4" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">Iron, brick, stone masonry (general purpose)</text></g>
+<path d="M 127.45 127.45 L 132.2 132.2" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 113.97962 127.45 L 132.2 145.67038" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 100.50923 127.45 L 130.50923 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 87.03885 127.45 L 117.03885 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 82.2 136.08154 L 103.56846 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 82.2 149.55192 L 90.09808 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 122.95987 127.45 L 132.2 136.69013" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 109.48949 127.45 L 132.2 150.16051" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 96.0191 127.45 L 126.0191 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 82.54872 127.45 L 112.54872 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 82.2 140.57166 L 99.07834 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 82.2 154.04205 L 85.60795 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 82.2 127.45 L 132.2 127.45 L 132.2 157.45 L 82.2 157.45 L 82.2 127.45 Z" fill="none" stroke="black" stroke-width="0.5" />
+<g transform="translate(82.2 123.45) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ANSI32</text></g>
+<g transform="translate(82.2 119.95) scale(1,-1)"><text x="0" y="0" font-size="2.4" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">Steel</text></g>
+<path d="M 190.31179 127.45 L 197.2 134.33821" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 181.33154 127.45 L 197.2 143.31846" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 172.35128 127.45 L 197.2 152.29872" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 163.37102 127.45 L 193.37102 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 154.39077 127.45 L 184.39077 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 129.23949 L 175.41051 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 138.21974 L 166.43026 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 147.2 L 157.45 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 156.18026 L 148.46974 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 194.80192 127.45 L 197.2 129.84808" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 185.82166 127.45 L 197.2 138.82834" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 176.84141 127.45 L 197.2 147.80859" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 167.86115 127.45 L 197.2 156.78885" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 158.8809 127.45 L 188.8809 157.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 149.90064 127.45 L 179.90064 157.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 147.2 133.72962 L 170.92038 157.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 147.2 142.70987 L 161.94013 157.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 147.2 151.69013 L 152.95987 157.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="3.175,1.5875" />
+<path d="M 147.2 127.45 L 197.2 127.45 L 197.2 157.45 L 147.2 157.45 L 147.2 127.45 Z" fill="none" stroke="black" stroke-width="0.5" />
+<g transform="translate(147.2 123.45) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ANSI33</text></g>
+<g transform="translate(147.2 119.95) scale(1,-1)"><text x="0" y="0" font-size="2.4" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">Bronze, brass, copper, composites</text></g>
+<path d="M 262.15384 127.45 L 262.2 127.49616" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 235.21307 127.45 L 262.2 154.43693" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 131.37769 L 238.27231 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 257.66371 127.45 L 262.2 131.98629" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 230.72295 127.45 L 260.72295 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 135.86782 L 233.78218 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 253.17359 127.45 L 262.2 136.47641" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 226.23282 127.45 L 256.23282 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 140.35795 L 229.29205 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 248.68346 127.45 L 262.2 140.96654" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 221.74269 127.45 L 251.74269 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 144.84808 L 224.80192 157.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 127.45 L 262.2 127.45 L 262.2 157.45 L 212.2 157.45 L 212.2 127.45 Z" fill="none" stroke="black" stroke-width="0.5" />
+<g transform="translate(212.2 123.45) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ANSI34</text></g>
+<g transform="translate(212.2 119.95) scale(1,-1)"><text x="0" y="0" font-size="2.4" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">Plastic, rubber, electrical insulation</text></g>
+<path d="M 61.46974 70.45 L 67.2 76.18026" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 52.48949 70.45 L 67.2 85.16051" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 43.50923 70.45 L 67.2 94.14077" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 34.52898 70.45 L 64.52898 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 25.54872 70.45 L 55.54872 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 71.08154 L 46.56846 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 80.06179 L 37.58821 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 89.04205 L 28.60795 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 17.2 98.02231 L 19.62769 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 65.95987 70.45 L 67.2 71.69013" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 56.97962 70.45 L 67.2 80.67038" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 47.99936 70.45 L 67.2 89.65064" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 39.0191 70.45 L 67.2 98.6309" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 30.03885 70.45 L 60.03885 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 21.05859 70.45 L 51.05859 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 17.2 75.57166 L 42.07834 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 17.2 84.55192 L 33.09808 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 17.2 93.53218 L 24.11782 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 17.2 70.45 L 67.2 70.45 L 67.2 100.45 L 17.2 100.45 L 17.2 70.45 Z" fill="none" stroke="black" stroke-width="0.5" />
+<g transform="translate(17.2 66.45) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ANSI35</text></g>
+<g transform="translate(17.2 62.95) scale(1,-1)"><text x="0" y="0" font-size="2.4" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">Fire brick, refractory material</text></g>
+<path d="M 128.82166 70.45 L 132.2 73.82834" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 124.33154 70.45 L 132.2 78.31846" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 119.84141 70.45 L 132.2 82.80859" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 115.35128 70.45 L 132.2 87.29872" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 110.86115 70.45 L 132.2 91.78885" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 106.37102 70.45 L 132.2 96.27898" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 101.8809 70.45 L 131.8809 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 97.39077 70.45 L 127.39077 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 92.90064 70.45 L 122.90064 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 88.41051 70.45 L 118.41051 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 83.92038 70.45 L 113.92038 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 82.2 73.21974 L 109.43026 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 82.2 77.70987 L 104.94013 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 82.2 82.2 L 100.45 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 82.2 86.69013 L 95.95987 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 82.2 91.18026 L 91.46974 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 82.2 95.67038 L 86.97962 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 82.2 100.16051 L 82.48949 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,1.5875,0.01,1.5875" stroke-linecap="round" />
+<path d="M 82.2 70.45 L 132.2 70.45 L 132.2 100.45 L 82.2 100.45 L 82.2 70.45 Z" fill="none" stroke="black" stroke-width="0.5" />
+<g transform="translate(82.2 66.45) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ANSI36</text></g>
+<g transform="translate(82.2 62.95) scale(1,-1)"><text x="0" y="0" font-size="2.4" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">Marble, slate, glass</text></g>
+<path d="M 196.17359 70.45 L 197.2 71.47641" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 191.68346 70.45 L 197.2 75.96654" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 187.19333 70.45 L 197.2 80.45667" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 182.7032 70.45 L 197.2 84.9468" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 178.21307 70.45 L 197.2 89.43693" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 173.72295 70.45 L 197.2 93.92705" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 169.23282 70.45 L 197.2 98.41718" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 164.74269 70.45 L 194.74269 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 160.25256 70.45 L 190.25256 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 155.76243 70.45 L 185.76243 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 151.27231 70.45 L 181.27231 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 70.86782 L 176.78218 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 75.35795 L 172.29205 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 79.84808 L 167.80192 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 84.33821 L 163.31179 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 88.82834 L 158.82166 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 93.31846 L 154.33154 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 97.80859 L 149.84141 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 197.2 99.14845 L 195.89845 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 197.2 94.65832 L 191.40832 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 197.2 90.1682 L 186.9182 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 197.2 85.67807 L 182.42807 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 197.2 81.18794 L 177.93794 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 197.2 76.69781 L 173.44781 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 197.2 72.20768 L 168.95768 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 194.46756 70.45 L 164.46756 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 189.97743 70.45 L 159.97743 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 185.4873 70.45 L 155.4873 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 180.99717 70.45 L 150.99717 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 176.50704 70.45 L 147.2 99.75704" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 172.01692 70.45 L 147.2 95.26692" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 167.52679 70.45 L 147.2 90.77679" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 163.03666 70.45 L 147.2 86.28666" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 158.54653 70.45 L 147.2 81.79653" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 154.0564 70.45 L 147.2 77.3064" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 149.56627 70.45 L 147.2 72.81627" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 147.2 70.45 L 197.2 70.45 L 197.2 100.45 L 147.2 100.45 L 147.2 70.45 Z" fill="none" stroke="black" stroke-width="0.5" />
+<g transform="translate(147.2 66.45) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ANSI37</text></g>
+<g transform="translate(147.2 62.95) scale(1,-1)"><text x="0" y="0" font-size="2.4" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">Lead, zinc, magnesium, sound/heat/electrical insulation</text></g>
+<path d="M 259.03538 70.45 L 262.2 73.61462" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 254.54525 70.45 L 262.2 78.10475" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 250.05512 70.45 L 262.2 82.59488" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 245.56499 70.45 L 262.2 87.08501" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 241.07487 70.45 L 262.2 91.57513" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 236.58474 70.45 L 262.2 96.06526" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 232.09461 70.45 L 262.09461 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 227.60448 70.45 L 257.60448 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 223.11435 70.45 L 253.11435 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 218.62423 70.45 L 248.62423 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 214.1341 70.45 L 244.1341 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 73.00603 L 239.64397 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 77.49616 L 235.15384 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 81.98629 L 230.66371 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 86.47641 L 226.17359 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 90.96654 L 221.68346 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 95.45667 L 217.19333 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 212.2 99.9468 L 212.7032 100.45" fill="none" stroke="black" stroke-width="0.18" />
+<path d="M 262.2 97.01024 L 258.76024 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 262.2 92.52012 L 254.27012 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 262.2 88.02999 L 249.77999 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 262.2 83.53986 L 245.28986 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 262.2 79.04973 L 240.79973 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 262.2 74.5596 L 236.3096 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 261.81948 70.45 L 231.81948 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 257.32935 70.45 L 227.32935 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 252.83922 70.45 L 222.83922 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 248.34909 70.45 L 218.34909 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 243.85896 70.45 L 213.85896 100.45" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 239.36884 70.45 L 212.2 97.61884" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 234.87871 70.45 L 212.2 93.12871" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 230.38858 70.45 L 212.2 88.63858" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 225.89845 70.45 L 212.2 84.14845" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 221.40832 70.45 L 212.2 79.65832" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 216.9182 70.45 L 212.2 75.1682" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 212.42807 70.45 L 212.2 70.67807" fill="none" stroke="black" stroke-width="0.18" stroke-dasharray="7.9375,4.762499999999999" />
+<path d="M 212.2 70.45 L 262.2 70.45 L 262.2 100.45 L 212.2 100.45 L 212.2 70.45 Z" fill="none" stroke="black" stroke-width="0.5" />
+<g transform="translate(212.2 66.45) scale(1,-1)"><text x="0" y="0" font-size="3" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="black" font-weight="bold">ANSI38</text></g>
+<g transform="translate(212.2 62.95) scale(1,-1)"><text x="0" y="0" font-size="2.4" text-anchor="start" dominant-baseline="auto" font-family="Arial, sans-serif" fill="#555555" font-weight="normal">Aluminum</text></g>
+</g>
+</svg>
