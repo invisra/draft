@@ -1,0 +1,518 @@
+# @invisra/draft — LLM/agent reference
+
+A dependency-free TypeScript library for generating engineering-style drafting
+sheets: geometry primitives, a physical-unit SVG renderer, ANSI/ISO/architectural
+paper sizes, title blocks, dimensioning, GD&T, hatching, and DXF/PDF export.
+No 3D CAD kernel — everything is plain TS producing SVG (+ optional DXF/PDF).
+
+This file is a dense API index for an agent writing code against this library.
+For prose design rationale (why things work the way they do), see README.md.
+For full per-symbol TSDoc, see dist/index.d.ts or the generated docs/ site.
+
+Mechanical-engineering drafting — fasteners & threads, ISO 286 / ISO 2768 /
+ASME B4.1 fits & tolerances, surface-finish & weld symbols, gears / springs /
+cams, hole & chamfer callouts, tolerance stack-ups — lives in the companion
+package `@invisra/draft-mechanical`, which builds on this core. None of those
+symbols are exported from `@invisra/draft`.
+
+```sh
+npm install @invisra/draft
+```
+
+## Mental model (read this before writing code)
+
+- **Units**: every number is millimeters, always. No unit suffixes on args.
+  Convert only at boundaries with `toMM(value, "in")` / `fromMM(valueMM, "in")`.
+- **Coordinates**: Y-up, origin bottom-left (+X right, +Y up) — standard
+  drafting convention, not SVG's native Y-down. You never think in SVG space;
+  `Sheet`/`renderSVGDocument` flip once at serialization.
+- **`Renderable`**: anything with `toSVG(): string`. `Sheet.add()` accepts any
+  `Renderable` — `DrawingElement`, `TextElement`, `Layer`, and every dimension/
+  annotation/GD&T class satisfy it. New primitives don't need registration.
+- **The core loop**: build `Path`s with geometry helpers or `Path` methods,
+  wrap each in `new DrawingElement(path, opts)`, `sheet.add(...)` it, then
+  `sheet.toSVG()`.
+- **"Array, caller adds" pattern**: helpers that return multiple pieces
+  (`centerMark`, `chainDimension`, `baselineDimension`, `hatch`, `hatchPattern`,
+  `datumTargetPoint`, `axisCenterline`, `boltCircleCenterline`)
+  return a plain array — loop and `.add()` each yourself; there's no wrapper
+  class holding a group.
+- **Classes vs functions**: most annotation/dimension/GD&T types are classes
+  (`new LinearDimension(...)`, `new FeatureControlFrame(...)`) implementing
+  `Renderable`. Pure geometry and formatting are plain functions.
+- Most annotation classes are anchored at a point plus `angleDeg` (0 = +X
+  axis, CCW positive) for their leader direction — `Callout`,
+  `RadialDimension`/`DiameterDimension`, `ItemBalloon`, `DetailViewCallout`,
+  `DatumFeatureSymbol`, `DatumTargetSymbol`, `ExaminationSymbol` all share
+  this `(point, ..., { angleDeg, ... })` shape.
+
+## Quick start
+
+```ts
+import { Sheet, TitleBlock, DrawingElement, roundedRectangle, circle, centerMark, LinearDimension, RadialDimension } from "@invisra/draft";
+
+const sheet = new Sheet({ orientation: "landscape", borderStyle: "zoned" }); // defaults to ANSI A (Letter), "plain" border
+
+sheet.setTitleBlock(new TitleBlock({
+  title: "BRACKET, MOUNTING",
+  drawingNumber: "DRW-1000",
+  revision: "A",
+  scale: "1:1",
+  sheet: "1 OF 1",
+  material: "AL 6061-T6",
+  projection: "third-angle",
+  drawnBy: "S. RICHS",
+  drawnDate: "2026-07-08",
+}));
+
+const area = sheet.drawingArea; // usable region inside the border/title block
+sheet.add(new DrawingElement(roundedRectangle(area.x + 20, area.y + 20, 80, 50, 6)));
+
+const holeCenter = { x: area.x + 30, y: area.y + 30 };
+sheet.add(new DrawingElement(circle(holeCenter.x, holeCenter.y, 4)));
+for (const mark of centerMark(holeCenter, 4, 2.5)) {
+  sheet.add(new DrawingElement(mark, { lineStyle: "centerline" }));
+}
+
+sheet.add(new LinearDimension({ x: area.x + 20, y: area.y + 20 }, { x: area.x + 100, y: area.y + 20 }, { offset: -12, orientation: "horizontal" }));
+sheet.add(new RadialDimension(holeCenter, 4, { angleDeg: 45 }));
+
+const svg: string = sheet.toSVG();
+```
+
+---
+
+## Units
+
+- `toMM(value, unit: "mm"|"in"): number`
+- `fromMM(valueMM, unit): number`
+- `MM_PER_INCH = 25.4`
+
+## Geometry — points & vectors
+
+`Point = { x, y }` (readonly, mm, Y-up).
+
+- `point(x, y): Point`
+- `addPoints(a, b)`, `subtractPoints(a, b)`, `scalePoint(p, factor)`
+- `distance(a, b): number`, `midpoint(a, b): Point`
+- `rotatePoint(p, angleRad, origin?): Point` — CCW positive
+- `dot(a, b): number`, `magnitude(v): number`, `normalize(v): Point` (throws on zero vector)
+- `perpendicular(v): Point` — rotates 90° CCW
+
+## Geometry — bounding box
+
+`BoundingBox = { minX, minY, maxX, maxY }`
+
+- `bboxFromPoints(points): BoundingBox` (throws if empty)
+- `unionBBox(a, b): BoundingBox`
+- `bboxWidth(b)`, `bboxHeight(b): number`
+
+## Geometry — segments
+
+`LineSegment = { type: "line", start, end }`
+`ArcSegment = { type: "arc", center, radius, startAngle, endAngle, counterclockwise }` — CAD-style (center/radius/angle), angles in radians from +X axis.
+`EllipticalArcSegment = { type: "ellipticalArc", center, rx, ry, rotation, startAngle, endAngle, counterclockwise }` — rotation radians CCW; start/end are PARAMETRIC (eccentric) angles, radians. Reduces to a circular arc when rx===ry.
+`CubicBezierSegment = { type: "bezier", start, control1, control2, end }` — cubic Bézier (two off-curve control points).
+`Segment = LineSegment | ArcSegment | EllipticalArcSegment | CubicBezierSegment`
+
+- `lineSegment(start, end): LineSegment`
+- `arcSegment(center, radius, startAngle, endAngle, counterclockwise?): ArcSegment` (throws if radius <= 0)
+- `ellipticalArcSegment(center, rx, ry, rotation, startAngle, endAngle, counterclockwise?): EllipticalArcSegment` (throws if rx/ry <= 0)
+- `cubicBezierSegment(start, control1, control2, end): CubicBezierSegment`
+- `arcPointAt(arc, angle): Point`; `ellipticalArcPointAt(arc, paramAngle): Point`; `bezierPointAt(seg, t): Point` (t in [0,1])
+- `segmentStart(seg) / segmentEnd(seg): Point`
+- `normalizeAngle(angle): number` — reduces to `[0, 2π)`
+- `arcSpan(arc): number` / `ellipticalArcSpan(arc): number` — radians traversed in sweep direction, `(0, 2π]`
+- `arcExtremaPoints(arc): Point[]` / `ellipticalArcExtremaPoints(arc): Point[]` — endpoints + extrema, for exact bbox
+- `bezierExtremaPoints(seg): Point[]` — endpoints + axis-aligned extrema (derivative roots), for exact bbox
+
+## Geometry — Path (Canvas2D-style builder)
+
+```ts
+class Path {
+  moveTo(x, y): this;
+  lineTo(x, y): this;
+  arc(options: { center, radius, startAngle, endAngle, counterclockwise? }): this;
+  ellipticalArc(options: { center, rx, ry, rotation?=0, startAngle, endAngle, counterclockwise? }): this; // angles parametric, radians
+  bezierCurveTo(c1x, c1y, c2x, c2y, x, y): this; // cubic Bézier from current point; throws if no current point
+  close(): this;
+  isClosed(): boolean;
+  getSegments(): readonly Segment[];
+  boundingBox(): BoundingBox; // throws if empty
+  flatten(angleStepDeg?): Point[]; // tessellate arcs to a straight-edge polygon
+  toSVGPathData(precision?): string;
+  transformed(scale, translate, rotationRad?=0): Path; // similarity transform (used by View/BlockInstance)
+}
+```
+Single subpath only — no compound paths (that's why `centerMark`/`datumTargetPoint`/etc return arrays of 2 elements for X/cross shapes).
+
+## Geometry — shape helpers (all return `Path`)
+
+- `rectangle(x, y, width, height): Path` — CCW, `(x,y)` = bottom-left
+- `roundedRectangle(x, y, width, height, radius): Path`
+- `circle(cx, cy, radius): Path` — two semicircles (SVG can't do 360° in one arc)
+- `ellipse(cx, cy, rx, ry, options?: { rotationDeg?=0, segments? }): Path` — two exact elliptical half-arcs by default; `segments` set → tessellated polyline instead
+- `ellipticalArc(cx, cy, rx, ry, startAngleDeg, endAngleDeg, options?: { rotationDeg?=0, counterclockwise?=true }): Path` — open partial arc; angles PARAMETRIC (eccentric)
+- `polyline(points, closed?): Path`
+- `fitSpline(points, options?: { closed?=false, tension?=0 }): Path` — smooth Catmull-Rom spline that passes THROUGH every point, emitted as native cubic Béziers (n-1 spans open, n closed). `tension` 0=loose→1=straight chords. Needs ≥2 points.
+- `centerMark(center, radius, overshoot?): [Path, Path]` — hole/round-feature center cross; use with `lineStyle: "centerline"`
+- `axisCenterline(p1, p2, options?: { overshootMM?=3, symmetryTicks?=false, strokeWidthMM?, color? }): DrawingElement[]` — long-dash-short-dash axis/symmetry line, extended past both ends; `symmetryTicks` adds paired short solid ticks at each end (ASME symmetry-line). Elements already carry `lineStyle: "centerline"`. Throws if p1==p2.
+- `boltCircleCenterline(center, radius, options?: { holeCenters?: Point[], overshootMM?=4, holeMarkRadiusMM?=2, strokeWidthMM?, color? }): DrawingElement[]` — companion to `boltCircle()`: dash-dot bolt circle + center cross through the pattern + a small centerline cross at each `holeCenters` entry. Throws on radius<=0.
+
+## Geometry — construction (compute a layout instead of hand-placing points)
+
+- `lineIntersection(a1, a2, b1, b2): Point | null` — infinite lines; null if parallel. `segmentIntersection(a1, a2, b1, b2): Point | null` — within both spans.
+- `breakSegmentAtCrossings(a, b, obstacles: ({kind:"segment",p1,p2} | {kind:"circle",center,radius})[], gapMM): [Point,Point][]` — splits a→b into the pieces left after cutting a gapMM gap centered on each obstacle crossing (overlaps merge). `[[a,b]]` if nothing crosses, `[]` if fully covered or zero-length. AutoCAD DIMBREAK primitive; wired into `LinearDimension`'s `breakAt`.
+- `lineCircleIntersection(p1, p2, center, radius): Point[]` (0/1/2, ordered along p1→p2). `segmentCircleIntersection(...)` — in-span only. `circleCircleIntersection(c1, r1, c2, r2): Point[]` (0/1/2, left-of-c1→c2-axis first; [] when separate/concentric/contained).
+- Constructions (`geometry/construct.ts`): `circleThrough3Points(a, b, c): { center, radius } | null` (circumcircle; null if collinear). `tangentPointsFromPoint(center, radius, from): Point[]` (2 touch points, left-of-from→center-axis first; 1 if `from` on circle; [] if inside). `perpendicularBisector(a, b): [Point, Point] | null` (through the midpoint, ⟂, segment-length; null if coincident). `perpendicularFoot(p, a, b): Point` (orthogonal projection of p onto the infinite line ab).
+- `filletCorner(p1, corner, p2, radius): { center, radius, tangentStart, tangentEnd, startAngle, endAngle, counterclockwise }` — tangent arc rounding a corner (p1/p2 give leg directions). Throws on collinear.
+- `roundedPolyline(points, radius, closed?=false): Path` — rounds every interior corner (all if closed) into legs + tangent arcs; radius clamped per corner. Needs ≥3 points.
+- `offsetPolyline(points, distance, closed?=false): Point[]` — signed miter offset (positive = left of travel); re-intersects adjacent edges. Straight miter (no self-intersection cleanup). Needs ≥2 points.
+- `boltCircle(center, count, radius, options?: { startAngleDeg?=0, endAngleDeg?, clockwise?=false }): Point[]` — full circle, or an arc from start→end inclusive when `endAngleDeg` set.
+- `linearPattern(start, step: Point, count): Point[]`; `rectangularPattern(origin, { columns, rows, dx, dy }): Point[]` (row-major).
+- `polygonUnion(subject, clip): Point[][]` / `polygonIntersection(...)` / `polygonDifference(subject, clip): Point[][]` — Greiner–Hormann polygon clipping on rings of `Point`s (flatten a `Path` first); returns 0+ result rings. Difference with a contained clip returns outer + reversed hole ring (even-odd fill via `hatch()`). Simple polygons in general position; input winding doesn't matter.
+- `polygonArea(points): number` — signed ring area (positive = CCW).
+- `isometricProjection(p: {x,y,z}): Point` — standard 30° isometric (Y-up: +X right-down, +Y left-down, +Z up; unit axis → unit length). `projectIsoPlane("top"|"left"|"right", p: Point): Point` — lay a flat 2D point on a pictorial face (second coord runs up on left/right). `isoPolyline(points3d): Point[]` — project a polyline. `isometricAxisDirections(): { x, y, z: Point }` — the three axis unit vectors.
+- `isometricEllipseAxes(plane, radius): { rx, ry, rotationDeg }` — the ellipse a circle projects to on a face (√3 major:minor; rot 0/top, -60/right, 60/left). `isometricCircle(plane, centerOnPlane: Point, radius, { segments? }): Path` — a hole/cylinder-end on a face as that ellipse (centerOnPlane is in-face 2D coords, projected internally). `isometricBox(size: {x,y,z}, { origin? }): Path[]` — visible edges of a prism (top loop + 2 front-face polylines).
+- `class IsometricText implements Renderable { constructor(position: Point, content: string, options?: { plane?: "top"|"left"|"right", right?: Point, up?: Point, size?=3, anchor?, fontFamily?, color?, weight?, id? }) }` — text lettered onto an isometric face (glyphs sheared into the plane via an SVG matrix; not the upright TextElement). Per-plane default axes are non-mirrored; pass explicit unit `right`/`up` to override. Renders in PDF too (the PDF text pipeline supports a full Tm; TextNode has an optional `matrix`).
+- `class IsometricLinearDimension implements Renderable { constructor(p1: Point, p2: Point, options: IsometricLinearDimensionOptions) }` — linear dimension on an isometric face. `IsometricLinearDimensionOptions extends DimensionStyle, ToleranceOptions: { plane: "top"|"left"|"right", offset /* signed, in-plane perpendicular */, text? }`. Endpoints are in face 2D coords; measures true in-plane distance (honors unit/zeroHandling/tolerance/count). Extension + dimension lines + flat arrowheads + value via IsometricText, all in the plane. SVG/PDF only (no native DXF).
+
+## SVG core
+
+- `Stroke = { color?, width?, dasharray?: number[], linecap?, linejoin? }`
+- `LineStyleName = "visible" | "hidden" | "centerline" | "phantom" | "break" | "section" | "cutting"` — ASME Y14.2/ISO 128 line types; `LINE_STYLES: Record<LineStyleName, Stroke>` (`break`/`section` thin continuous; `cutting` = thick long-dash/short-dash cutting-plane line)
+- `interface Renderable { toSVG(context?: RenderContext): string; bounds?(context?): BoundingBox | null }` — `RenderContext = { dimensionDefaults?: DimensionStyle, transform?: ViewTransform }`; zero-arg `toSVG()` implementations still satisfy it. `bounds()` is OPTIONAL (implemented by DrawingElement/TextElement/Layer/View/BlockInstance; dimensions/annotations omit it). `boundsOf(renderables, context?): BoundingBox | null` unions the measurable ones.
+- Introspection & fit-to-view: `Sheet.contentBounds(): BoundingBox | null` (added content only), `View.contentBounds()` (children's true model extent) / `View.bounds()` (paper extent). `fitView(contentBoundsMM, area: { x, y, width, height }, options?: { marginMM?=0, maxScale?, name? }): View` — scales (aspect-preserved) + centers content into `area` (e.g. `sheet.drawingArea`); returns an empty View you `.add()` the content to.
+- `class View implements Renderable { readonly scale; constructor(options: { scale, rotationDeg?=0, modelOrigin?={0,0}, paperOrigin?={0,0}, name? }); add(el): this; toPaper(modelPt): Point; toModel(paperPt): Point }` — scaled/rotated viewport: children authored in TRUE model coords, drawn at `scale` (2 = 2:1) and turned `rotationDeg` about modelOrigin (auxiliary/rotated views). Annotative: geometry scales+rotates but text/arrow/line-weight sizes stay paper-size, text stays upright (never turned), and dimensions read the true model value. Honored by DrawingElement/TextElement/dimensions/leader-callouts; position other annotations via `toPaper()`. Doesn't nest-compose. `ViewTransform = { scale, translate: Point, rotation?: number /* rad */ }`; `applyViewTransform(p, transform?)`, `viewScale(transform?)`.
+- `formatScaleRatio(scale): string` — `2`→`"2:1"`, `0.5`→`"1:2"`, `1`→`"1:1"`.
+- `STANDARD_SCALES: readonly number[]` (ISO 5455 preferred, 50…1…1/10000), `nearestStandardScale(scale, scales?=STANDARD_SCALES): number` — snaps to the nearest preferred ratio in log space (3→2, 0.3→0.2); `isStandardScale(scale, scales?): boolean`. Pass a custom list for ASME (1/4, 1/8…). Throws on scale≤0.
+- `class Block { constructor(name?); add(el): this; getElements(): Renderable[]; instance(options?: { position?={0,0}, scale?=1, rotationDeg?=0 }): BlockInstance }` — reusable symbol defined once in LOCAL coords. `class BlockInstance implements Renderable` — one placement; applies a view-style transform to the block's children (geometry scales/rotates, text upright) and COMPOSES with an enclosing View's transform (unlike View, which replaces). Emits no wrapper group (PDF-safe). `composeViewTransforms(outer?, inner): ViewTransform` composes two similarity transforms (`p → outer(inner(p))`).
+- `class DrawingElement { constructor(path: Path, options?: { stroke?: Stroke | "none", lineStyle?: LineStyleName, fill?: string, id?: string }) }` — the basic stroked/filled `<path>` building block
+- `class TextElement { constructor(position: Point, content: string, options?: { size?, anchor?: "start"|"middle"|"end", baseline?: "auto"|"middle"|"hanging", fontFamily?, color?, weight?: "normal"|"bold", id?, lineHeightMM?, maxWidthMM?, underline?: boolean }); lines(): string[] }` — carries its own Y-flip so Y-up positions render upright. Multi-line: `content` with hard `\n` breaks (and/or word-wrap to `maxWidthMM`, measured with AFM metrics) renders one `<text>` per line, stacked downward from `position` by `lineHeightMM` (default `size*1.2`) in paper units (line spacing, like text size, doesn't scale with a View). `lines()` returns the resolved display lines. `bounds()` boxes all lines (widest line × line count).
+- `class Layer implements Renderable { constructor(options: { name, visible?: boolean }); add(element: Renderable): this }` — named `<g>`; nests (`layer.add(otherLayer)`); `visible: false` keeps content in output but `display:none`
+- `renderSVGDocument({ widthMM, heightMM, body }): string` — wraps raw SVG body in a standalone physical-unit `<svg>`, applying the one Y-flip
+
+## Paper sizes
+
+`PaperSize = { name, widthMM, heightMM, sizeLabel }` (portrait/base orientation)
+
+Constants: `ANSI_A..ANSI_E` (ANSI Y14.1), `A0..A5` (ISO 216, ≡ JIS A), `ARCH_A..ARCH_E1` (US architectural).
+`PAPER_SIZES: Record<name, PaperSize>` (all of the above); `PaperSizeName = keyof typeof PAPER_SIZES`.
+`customPaperSize(widthMM, heightMM, label?): PaperSize` — one-off size; any object shaped like `PaperSize` works anywhere one is accepted.
+
+## Sheet & border
+
+- `BorderStyle = "plain" | "zoned"` — zoned adds a numbered-column/lettered-row zone grid (e.g. "zone C3")
+- `renderPlainBorder(widthMM, heightMM, marginMM, options?: { strokeWidthMM? }): string`
+- `renderZonedBorder(widthMM, heightMM, marginMM, options?: { strokeWidthMM?, targetZoneSizeMM?, tickStrokeWidthMM?, labelSizeMM? }): string`
+- `Orientation = "portrait" | "landscape"`
+- `DrawingArea = { x, y, width, height }` — usable region inside border/title block
+
+```ts
+class Sheet {
+  constructor(options?: {
+    paperSize?: PaperSize;         // default ANSI_A
+    orientation?: Orientation;     // default "landscape"
+    marginMM?: number;
+    borderStrokeWidthMM?: number;
+    borderStyle?: BorderStyle;     // default "plain"
+    zonedBorderOptions?: { targetZoneSizeMM?, tickStrokeWidthMM?, labelSizeMM? };
+    dimensionDefaults?: DimensionStyle; // merged under every dimension/leader element (options win); e.g. ASME_INCH
+  });
+  readonly paperSize: PaperSize;
+  readonly orientation: Orientation;
+  readonly marginMM: number;
+  readonly widthMM: number;
+  readonly heightMM: number;
+  get drawingArea(): DrawingArea;
+  add(element: Renderable): this;
+  setTitleBlock(titleBlock: TitleBlockLike): this;
+  contentBounds(): BoundingBox | null;
+  toSVG(): string;
+  toDXF(options?: { precision?, onUnsupported?(msg) }): string;
+}
+```
+
+## Multi-sheet sets
+
+```ts
+type SheetContext = { index: number; total: number; sheetLabel: string }; // "2 OF 5"
+type SheetFactory = (ctx: SheetContext) => Sheet;
+
+class DrawingSet {
+  add(factory: SheetFactory): this;   // factory, not a ready Sheet — total isn't known until all are added
+  build(): Sheet[];
+  toSVGs(): string[];
+}
+```
+
+## Title blocks
+
+`TitleBlockLike = { heightMM: number; render(ctx: TitleBlockRenderContext): string }` — anything satisfying this works with `Sheet.setTitleBlock()`.
+
+- `class TitleBlock implements TitleBlockLike` — classic ASME corner block (signoff grid + drawing ID). `constructor(fields: TitleBlockFields, options?: { widthMM?, labelSize?, valueSize?, strokeWidthMM? })`.
+  `TitleBlockFields`: `title, drawingNumber` (required-ish); `revision?, size?, scale?, sheet?, material?, finish?, generalTolerance?: string[], projection?: ProjectionAngle, drawnBy?, drawnDate?, checkedBy?, checkedDate?, engApprovedBy?, engApprovedDate?, mfgApprovedBy?, mfgApprovedDate?`. `size` falls back to the Sheet's paper size label.
+- `class ISO7200TitleBlock implements TitleBlockLike` — ISO 7200:2004 field set, single full-width column. `constructor(fields: ISO7200Fields, options?: GridTitleBlockOptions)`.
+  `ISO7200Fields`: `title, legalOwner, identificationNumber, documentType, dateOfIssue, creator, approvalPerson` (mandatory) + `revisionIndex?, sheet?, size?`.
+- `class GridTitleBlock implements TitleBlockLike` — fully custom title block from raw columns/rows/cells. `constructor(columns: GridColumn[], options?: { widthMM?, labelSize?, valueSize?, strokeWidthMM?, color? })`.
+  `GridColumn = { widthFraction, rows: GridRow[] }`; `GridRow = { heightMM, cells: GridCell[] }`; `GridCell` = `LabeledCell { kind:"labeled", widthFraction, label, value?, lines?, valueSize?, align? }` | `CaptionCell { kind:"caption", widthFraction, text, size?, bold?, align? }`.
+- `ProjectionAngle = "first-angle" | "third-angle"`; `projectionSymbol(center, angle, options?: { strokeWidthMM?, size? }): string` — real ISO 128/ASME Y14.3 cone+circles pictogram.
+- Low-level: `gridHeight(rows): number`, `renderGridColumn(x0, y0, width, rows, style: GridStyle): string`.
+
+## Tables
+
+- `class RevisionTable implements Renderable { readonly heightMM: number; constructor(anchor: Point, entries: RevisionEntry[], options?: RevisionTableOptions) }` — `anchor` = top-left. `RevisionEntry = { rev, description, date, approved?, zone? }`. Pass entries **newest-first**. `RevisionTableOptions.columns?: ("zone"|"rev"|"description"|"date"|"approved")[]` (default omits zone).
+- `class BOMTable implements Renderable { readonly heightMM: number; constructor(anchor: Point, entries: BOMEntry[], options?: BOMTableOptions) }` — `BOMEntry = { item, quantity, partNumber?, description, material? }`. Entries render top-to-bottom as given (reverse yourself for "item 1 at bottom"). `BOMTableOptions.columns?: ("item"|"quantity"|"partNumber"|"description"|"material")[]`.
+
+## Hatching
+
+- `hatch(boundary: Path | Path[], options?: HatchOptions): DrawingElement[]` — parallel section-lining, even-odd fill rule (pass `[outer, hole1, hole2, ...]` to leave holes unhatched automatically). `HatchOptions = { angleDeg?=45, spacingMM?=3, phaseMM?=0, strokeWidthMM?=0.18, color?="black", dasharray?, linecap? }`.
+- `hatchPattern(boundary, pattern: HatchPattern, options?: { scale?=1, strokeWidthMM?, color? }): DrawingElement[]` — runs `hatch()` per line family in a named multi-family pattern.
+- `HatchPattern = { name, description, families: HatchLineFamily[] }`; `HatchLineFamily = { angleDeg, spacingMM, phaseMM?, dasharray?, linecap? }`.
+- Built-in material patterns (converted from AutoCAD `acad.pat`): `ANSI31` (iron/brick/stone), `ANSI32` (steel), `ANSI33` (bronze/brass/copper), `ANSI34` (plastic/rubber), `ANSI35` (fire brick), `ANSI36` (marble/slate/glass), `ANSI37` (lead/zinc/magnesium), `ANSI38` (aluminum). All in `ANSI_HATCH_PATTERNS: Record<name, HatchPattern>`.
+- `knurl(boundary, options?: { pattern?: "diamond"|"straight", angleDeg?, spacingMM?=2, strokeWidthMM?=0.18, color? }): DrawingElement[]` — knurl-texture fill via `hatch()`; diamond = two families at ±angleDeg (default 45), straight = one (default 0). `knurlNote(pitch, pattern?="diamond"): string` → e.g. `"0.8 DIAMOND KNURL"` for a leader.
+
+## Annotations
+
+- `class CuttingPlaneLine implements Renderable { constructor(points: Point[], options: { viewDirectionDeg, label?, strokeWidthMM?=0.6, color?, legLengthMM?, arrowLengthMM?, arrowWidthMM?, labelSizeMM? }) }` — section marker; `points` (2+) for straight or offset/stepped sections; arrows point in `viewDirectionDeg` = direction of sight into the section (not toward the viewer).
+- `sectionView(boundary: Path | Path[], options?: { cut?: { p1, p2, keep: "left"|"right" }, angleDeg?=45, spacingMM?=3, hatchStrokeWidthMM?=0.18, outline?=true, outlineStrokeWidthMM?=0.5, color? }): { region: Point[][], hatch: DrawingElement[], outline: DrawingElement[] }` — generates a section fill: section-lines the material region (holes open via even-odd), optionally clipping to one side of a `cut` plane first (each ring ∩ half-plane, Greiner–Hormann — keep the cut line off exact vertices). 2D fill generator over the outline you supply, not a 3D section.
+- Named section helpers (`sectionHelpers.ts`, on `sectionView`): `halfSection(boundary, cut, options?): { region, hatch, outline, centerline }` (sections one half + returns the axis centerline along the cut plane); `revolvedSection(profile, options?): SectionViewResult` (thin 0.25mm outline default, in-situ); `removedSection(profile, { label?, labelSizeMM?, labelGapMM?, ...sectionViewOptions }): { region, hatch, outline, label? }` (`label` → a centered `ViewLabel` "SECTION A-A" below the profile).
+- `class DetailViewCallout implements Renderable { constructor(center: Point, radius: number, options: { angleDeg, label, text?, strokeWidthMM?, color? }) }` — phantom-line circle + elbow leader to "DETAIL X".
+- `class ViewLabel implements Renderable { constructor(position: Point, title: string, options?: { scale?, textSizeMM?=5, scaleSizeMM?, anchor?="middle", underline?=false, strokeWidthMM?=0.5, color? }) }` — bold view title ("SECTION A-A"/"VIEW A"/"DETAIL B" — caller owns the full string), optional smaller scale caption below + optional underline. The title the section/detail markers don't draw.
+- `class ViewArrow implements Renderable { constructor(tail: Point, options: { angleDeg, label, lengthMM?=12, arrowLengthMM?=3.5, arrowWidthMM?=1.2, labelSizeMM?=5, strokeWidthMM?=0.6, color? }) }` — ISO 128-30 viewing-direction (arrow method) indicator: thick arrow in the sight direction + bold letter at the tail; the referenced view is titled with the same letter via ViewLabel. Both stay paper-size under a View transform.
+- `class ExaminationSymbol implements Renderable, Explodable { constructor(jointPoint: Point, options: ExaminationSymbolOptions) }` — AWS A2.4:2020 clause 17 (nondestructive examination). `ExamSpec = { methods: string|string[] (RT/UT/MT/PT/VT/ET…, array joined with "+"), length? (extent or "25%"), count? }`. `ExaminationSymbolOptions = { angleDeg, arrowSide?: ExamSpec, otherSide?: ExamSpec, centered?: ExamSpec, allAround?, fieldExam?, tailNote?, radiationAngleDeg?, refLineLengthMM?, textSizeMM?, ...DimensionStyle-ish }`. Designation below line (arrowSide) / above (otherSide) / straddling (centered); length right of designation, count in parens away from line; `radiationAngleDeg` draws the radiation-direction arrow (§17.4). Not covered: sequenced reference lines. (Weld symbols themselves live in `@invisra/draft-mechanical`.)
+- `class ItemBalloon implements Renderable { constructor(touchPoint: Point, itemNumber: string|number, options: { angleDeg, terminus?: "dot"|"arrow", radiusMM?, ... }) }` — BOM cross-reference balloon.
+- `zigzagBreakLine(p1, p2, options?: { strokeWidthMM?, color?, amplitudeMM?=4, widthMM?=10 }): DrawingElement` — "long break" for a flat member; call once per edge.
+- `cylindricalBreakLine(p1, p2, options?: { strokeWidthMM?, color? }): DrawingElement` — "S-break" for round shaft/tube; `p1`/`p2` span the diameter; call once (covers both edges).
+- `freehandBreakLine(p1, p2, options?: { strokeWidthMM?=0.5, color?, amplitudeMM?=1.5, wavelengthMM?=6 }): DrawingElement` — ASME Y14.3 freehand "short break": thick wavy line; deterministic undulation (sine faired through fitSpline, ends on p1/p2), not randomized.
+- `revisionCloud(boundary: Path | Point[], options?: { arcLengthMM?=8, bulgeRatio?=0.18, jitter?=0, seed?=1, strokeWidthMM?=0.35, color? }): DrawingElement` — scalloped-arc boundary around a changed area. `jitter` (0–1) varies bump size/bulge for a hand-drawn look; deterministic per `seed`.
+- `class RevisionSymbol implements Renderable { constructor(center: Point, letter: string, options?: { shape?: "circle"|"triangle" /* default circle */, sizeMM?=6, strokeWidthMM?, textSizeMM?, color? }) }`.
+- `class NotesBlock implements Renderable { readonly heightMM: number; constructor(anchor: Point, notes: string[], options?: { heading?="NOTES:", numbered?=true, startNumber?=1, textSizeMM?=2.5, lineSpacingMM?, indentMM?, maxWidthMM?, color? }) }` — numbered NOTES list, `anchor` = top-left, grows down; long notes wrap at `maxWidthMM` with hanging indent.
+- `class FlagNote implements Renderable { constructor(center: Point, noteNumber: number|string, options?: { shape?: "triangle"|"pentagon"|"hexagon" /* default triangle */, sizeMM?=8, textSizeMM?, strokeWidthMM?, color? }) }` — numbered flag/delta note tying a feature to a NotesBlock entry.
+
+## GD&T (ASME Y14.5)
+
+- `GDTCharacteristic` (14 symbols): `"straightness"|"flatness"|"circularity"|"cylindricity"|"profile-line"|"profile-surface"|"angularity"|"perpendicularity"|"parallelism"|"position"|"concentricity"|"symmetry"|"circular-runout"|"total-runout"`.
+- `renderCharacteristicSymbol(characteristic, c: Point, s: number, style?: { strokeWidthMM?, color? }): string`.
+- `class FeatureControlFrame implements Renderable { constructor(anchor: Point, characteristic: GDTCharacteristic, toleranceValue: number, options?: FeatureControlFrameOptions) }` — `anchor` = bottom-left, grows rightward. `FeatureControlFrameOptions = { diameter?: boolean, modifier?: "MMC"|"LMC", projectedZone?: boolean, projectedHeight?: number, unequallyDisposed?: boolean, unequallyDisposedValue?: number, freeState?: boolean, tangentPlane?: boolean, statistical?: boolean, datums?: { letter, modifier? }[] /* 0-3 */, precision?=2, strokeWidthMM?, textSizeMM?, color? }`. Tolerance cell order (left→right): value, `Ⓤ`+amount (unequally-disposed profile), `Ⓜ`/`Ⓛ`, boxed `ST` (statistical), `Ⓟ`+height (projected zone), `Ⓕ` (free state), `Ⓣ` (tangent plane). `projectedHeight` implies `Ⓟ`; `unequallyDisposedValue` implies `Ⓤ`.
+- `class CompositeFeatureControlFrame implements Renderable { constructor(anchor: Point, characteristic: GDTCharacteristic, segments: FrameSegment[] /* ≥2 */, options?: { precision?, strokeWidthMM?, textSizeMM?, color? }) }` — ASME Y14.5 composite frame: one shared characteristic symbol (tall cell) + stacked tolerance rows (upper PLTZF over lower FRTZF). `FrameSegment = { toleranceValue, diameter?, modifier?, projectedZone?, projectedHeight?, freeState?, tangentPlane?, unequallyDisposed?, unequallyDisposedValue?, statistical?, datums? }`. Columns align across rows; a row with fewer datums extends its last cell. Differs from stacking `FeatureControlFrame`s (which repeat the symbol).
+- `class MultipleSingleSegmentFrame implements Renderable, Explodable { constructor(anchor: Point, rows: SingleSegmentRow[] /* ≥2 */, options?) }` — ASME Y14.5 multiple single-segment control: complete independent frames stacked, each row with its **own** characteristic symbol (full-width dividers), unlike the composite's shared symbol. `SingleSegmentRow = FrameSegment & { characteristic: GDTCharacteristic }` (rows may differ). Options same as composite.
+- Datum-reference `▷` translation modifier: `DatumReferenceSpec.translation?: boolean` (rendered after the datum letter + material modifier) on any FCF/composite/multiple frame.
+- GD&T application modifiers (`modifierSymbols.ts`, drawn on the leader/adjacent, not in cells): `allAroundSymbol(junction, opts?): DrawingElement[]` (circle at leader knee), `allOverSymbol(junction, opts?)` (double circle), `betweenSymbol(from, to, opts?: { fromLabel?, toLabel?, sizeMM?, ... }): DxfPrimitive[]` (`↔` double-arrow), `continuousFeatureNote(anchor, opts?)` (`CF`). Opts share `{ sizeMM?=3, strokeWidthMM?=0.25, color? }`.
+- `class DatumFeatureSymbol implements Renderable { constructor(touchPoint: Point, letter: string, options: { angleDeg, leaderLengthMM?=8, boxSizeMM?=6, strokeWidthMM?, textSizeMM?, color?, filled?=true }) }` — tags a whole feature as a datum.
+- `class DatumTargetSymbol implements Renderable { constructor(touchPoint: Point, letter: string, targetNumber: number, options: { angleDeg, areaSize?, areaText?, side?: "near"|"far", leaderLengthMM?=10, diameterMM?=8, strokeWidthMM?, textSizeMM?, color?, precision?=2 }) }` — split circle (letter+number / optional area size); tags a specific point/line/area. Upper half: `areaSize` → "⌀6.00" (circular), or `areaText` → free text e.g. "10X6" (non-circular; overrides areaSize).
+- `datumTargetPoint(center, size?, options?): DrawingElement[]` — "X" marker (2 elements).
+- `datumTargetLine(p1, p2, options?): DrawingElement[]` — phantom line + X at each end.
+- `datumTargetArea(center, radius, options?): DrawingElement[]` — cross-hatched circular area marker. `datumTargetRectangle(center, width, height, options?)` — rectangular; `datumTargetAreaOutline(boundary: Path, options?)` — any closed Path (ellipse/polygon/…). All return `DrawingElement[]` (hatch + phantom outline).
+- Material-condition calculator (`bonusTolerance.ts`): `bonusTolerance(feature, actualSize): number` / `totalToleranceAt(feature, actualSize): number` / `virtualCondition(feature): { mmc, lmc, virtualCondition, resultantCondition }` — ASME Y14.5 material-condition calc. `FeatureToleranceInput = { featureType: "internal"|"external", minSize, maxSize, geometricTolerance, modifier: "MMC"|"LMC"|"RFS" }`. internal→MMC=minSize; external→MMC=maxSize. bonus = departure from MMC/LMC (0 for RFS); MMC modifier: external VC=MMC+t/RC=LMC−t, internal VC=MMC−t/RC=LMC+t (LMC reverses).
+
+> ISO 286 / ISO 2768 / ASME B4.1 limits & fits, surface-finish symbols, and
+> tolerance stack-ups are **not** in this package — import them from
+> `@invisra/draft-mechanical`.
+
+## Dimensioning
+
+`DimensionStyle` (shared style, all optional, defaults via `DEFAULT_DIMENSION_STYLE`): `{ strokeWidthMM, arrowLengthMM, arrowWidthMM, extensionGapMM, extensionOvershootMM, textSizeMM, textGapMM, precision, unit?: "mm"|"in", zeroHandling?: "none"|"inch"|"metric", color, dualUnit?: "mm"|"in", dualPrecision?, dualZeroHandling? }`.
+`resolveDimensionStyle(options): ResolvedDimensionStyle`.
+- `unit: "in"` displays the measured mm value as decimal inches (label only; geometry stays mm) and defaults `precision`→3, `zeroHandling`→`"inch"`. `zeroHandling`: `"inch"` drops the leading zero (`.250`, ASME Y14.5), `"metric"` drops trailing zeros (`0.5`/`24`), `"none"` (default for mm) keeps fixed decimals (`80.00`). A supplied `tolerance` is read in the display `unit`. AngularDimension ignores `unit` (degrees).
+- Measurement format helpers: `formatMeasurement(valueMM, format): string` (converts mm→unit then formats), `formatValue(valueInUnit, format): string`, `applyZeroHandling(fixed, zeroHandling): string`, `resolveMeasurementFormat(fmt?): ResolvedMeasurementFormat`, `toMeasurementFormat(fmt?)`, where `format = number /* legacy precision, mm/none */ | ResolvedMeasurementFormat = { unit, precision, zeroHandling, inchDisplay?, fractionDenominator? }`.
+- Inch display styles (`unit: "in"` only, via `DimensionStyle.inchDisplay` / `MeasurementFormat.inchDisplay`): `"decimal"` (default), `"fractional"` (`3/8`, `1 1/2`), `"architectural"` (`3'-6 1/2"`); `fractionDenominator` (power of two, default 16). Standalone: `formatFractionalInches(valueIn, denom?=16): string`, `formatArchitecturalInches(valueIn, denom?=16): string`.
+- DMS angles: `AngularDimension` `angleFormat?: "decimal"|"dms"` → `30°30′`. Standalone: `formatAngleDMS(decimalDegrees, secondsPrecision?=0): string`.
+- Dual dimensioning (ASME Y14.5 §2.4 bracket method): set `dualUnit` to append the value in a second unit — `50.00 [1.969]`; tolerance converted too (`50.00 ±0.50 [1.969 ±.020]`), prefixes repeat (`⌀25.40 [⌀1.000]`). Honored by LinearDimension (+chain/baseline) and Radial/DiameterDimension; text-override or AngularDimension → no bracket. Helpers: `resolveDualFormat(style): ResolvedMeasurementFormat|null`, `dualSecondary(valueMM, prefix, style, tolOptions): string|undefined` (inner secondary text, no brackets), `appendDual(primaryText, valueMM, prefix, style, tolOptions): string`.
+- US decimal-inch block tolerance: `inchToleranceBlock(options: { onePlace?, twoPlace?, threePlace?, fourPlace?: number, fractionalInch?: string, angularDeg?: number }): string[]` — e.g. `[".X ±.03", ".XX ±.01", ".XXX ±.005", "ANGLES ±0.5°"]`; feed into `TitleBlockFields.generalTolerance`. `formatInchToleranceValue(value): string` formats a single band. (The ISO 2768 counterpart, `iso2768Note`, is in `@invisra/draft-mechanical`.)
+- Document-wide defaults: `new Sheet({ dimensionDefaults: DimensionStyle })` merges that style UNDER every dimension/leader element's own options at render time (per-element wins), so a whole sheet is inches/one style in one place. Presets: `ASME_INCH` (`{unit:"in",zeroHandling:"inch"}`), `ASME_METRIC`, `ISO_METRIC` (`{unit:"mm",zeroHandling:"metric"}`). Flows through `Layer`s and into PDF export. Honored by dimensions + `Callout`; `AngularDimension` ignores an inherited `unit`. `mergeDimensionDefaults(options, defaults): options` exposes the merge; `Renderable.toSVG(context?: RenderContext)` and `RenderContext = { dimensionDefaults? }` carry it.
+
+`ToleranceOptions` (shared by every dimension class): `{ tolerance?: number | { plus, minus }, toleranceDisplay?: "nominal"|"limits", basic?: boolean, reference?: boolean, count?: number, typical?: boolean, notToScale?: boolean }`.
+- Plain number = symmetric `±X`; `{ plus, minus }` = asymmetric.
+- `toleranceDisplay: "limits"` → stacked upper/lower limits instead of `±` (LinearDimension/AngularDimension only).
+- `basic: true` → boxed ASME basic-dimension value. `reference: true` → parenthesized `"(40.00)"`.
+- `notToScale: true` → underlines the value (ASME Y14.5 §2.2; SVG/PDF only, not DXF TEXT). `TextElement`'s `underline?: boolean` option backs it.
+- `LinearDimension` also takes `half?: boolean` (half/symmetry dimension: `p1` on the axis of symmetry, only the `p2` side drawn — one extension line + one arrowhead, line runs past the axis; displayed value is the **full** size = 2× the p1→p2 distance; native DXF gets the same full value).
+- `count: 4` → `"4X …"` repetition prefix (ASME §1.9.5), outside any reference parens; `typical: true` → appends `" TYP"`. Applied in the shared `formatToleranceText`, so all dimension classes and native DXF DIMENSION text get them. A dual `[in]` bracket never repeats count/TYP/reference.
+- Feature-shape prefixes: `RadialDimension`/`DiameterDimension` take `spherical?: boolean` → `SR`/`S⌀` (ASME §3.3.6); `LinearDimension` takes `square?: boolean` → `□` prefix (§3.3.7). In non-embedded PDF `□`→`SQ ` (like `⌀`→`Ø`).
+
+```ts
+class LinearDimension implements Renderable {
+  constructor(p1: Point, p2: Point, options: LinearDimensionOptions);
+}
+// LinearDimensionOptions extends DimensionStyle, ToleranceOptions:
+//   orientation?: "aligned"|"horizontal"|"vertical" (default "aligned")
+//   offset: number   // signed, +90° CCW from measurement axis
+//   text?: string    // override auto-formatted value
+//   square?: boolean // □ prefix (ASME §3.3.7 square feature)
+//   breakAt?: LineBreakObstacle[] // DIMBREAK: gap ext/dim lines at crossings (model coords); breakGapMM?=1.5. SVG only, not DXF.
+
+class RadialDimension implements Renderable {   // "R 4.00" leader
+  constructor(center: Point, radius: number, options: RadialDimensionOptions);
+}
+class DiameterDimension implements Renderable { // "⌀ 8.00" leader, same options shape
+  constructor(center: Point, radius: number, options: RadialDimensionOptions);
+}
+// RadialDimensionOptions extends LeaderOptions, ToleranceOptions: { angleDeg, text?, spherical? (SR/S⌀, ASME §3.3.6) }
+
+class AngularDimension implements Renderable {
+  constructor(vertex: Point, p1: Point, p2: Point, options: AngularDimensionOptions);
+}
+// AngularDimensionOptions extends DimensionStyle, ToleranceOptions: { radius, text? }
+// Measures CCW from ray-toward-p1 to ray-toward-p2 — order p1/p2 CCW or you get the reflex angle.
+
+class ArcLengthDimension implements Renderable {  // ASME arc-length dim: radial ext lines to a concentric dim arc, tangent arrows, "⌒15.71"
+  constructor(center: Point, radius: number, startAngleDeg: number, endAngleDeg: number, options: ArcLengthDimensionOptions);
+}
+// ArcLengthDimensionOptions extends DimensionStyle, ToleranceOptions: { offset /* radial paper mm to the dim arc */, counterclockwise?=true, symbol?=true /* ⌒ prefix */, text? }
+// Value = radius × sweep (true arc length), honors unit/zeroHandling, scales in a View.
+
+class JoggedRadiusDimension implements Renderable {  // ASME §5.9.4 foreshortened radius (true center off-sheet)
+  constructor(arcPoint: Point, falseCenter: Point, radius: number, options: JoggedRadiusDimensionOptions);
+}
+// JoggedRadiusDimensionOptions extends DimensionStyle, ToleranceOptions: { jogSizeMM?=3, jogPosition?=0.5 /* fraction arc→falseCenter */, text? }
+// Leader arc→(zigzag jog)→falseCenter, arrow at arcPoint; label reports the real R… (unforeshortened).
+
+class MultiLeader implements Renderable {  // one note, several converging leaders — "3X ⌀5 THRU"
+  constructor(targets: Point[], text: string | string[], options: MultiLeaderOptions);
+}
+// MultiLeaderOptions extends LeaderOptions: { landing: Point /* convergence point + shoulder start */, shoulderSign?: 1|-1 /* default: away from targets */ }
+// A leader from each target to `landing`, then one horizontal shoulder into the note; arrowheads at targets unless arrow:false.
+
+class Callout implements Renderable {  // generic elbow-leader note, e.g. "4X ⌀8.00 THRU"
+  constructor(targetPoint: Point, text: string, options: CalloutOptions); // CalloutOptions extends LeaderOptions: { angleDeg }
+}
+
+class OrdinateDimension implements Renderable {  // ASME arrowless coordinate dim: extension line, no arrow, no dim line
+  constructor(origin: Point, feature: Point, options: OrdinateDimensionOptions);
+}
+// OrdinateDimensionOptions extends DimensionStyle, ToleranceOptions: { axis: "x"|"y", offset /* signed extension length */, jog?=0 /* lateral dogleg */, text? }
+// Value = |feature[axis] - origin[axis]|, from a common datum (origin reads 0). Honors unit/zeroHandling.
+```
+
+> Hole callouts (`HoleCallout`), chamfer callouts (`ChamferCallout`), taper
+> callouts (`TaperCallout`), and hole tables (`HoleTable`/`HoleTag`) live in
+> `@invisra/draft-mechanical`, not this package.
+
+Stacking helpers (return arrays — loop and `.add()`):
+- `chainDimension(points, options: LinearDimensionOptions): LinearDimension[]` — consecutive pairs, one shared offset.
+- `baselineDimension(points, options: LinearDimensionOptions & { stackSpacing?=8 }): LinearDimension[]` — every point from `points[0]`, increasing offsets.
+- `ordinateDimensions(origin, features, options: OrdinateDimensionOptions): OrdinateDimension[]` — one ordinate per feature from a common origin (include `origin` in `features` to show its `0`).
+- `class OrdinateOrigin implements Renderable { constructor(origin: Point, options?: { diameterMM?=3, strokeWidthMM?=0.25, color?="black" }) }` — ASME §10.3 / ISO 129 origin indicator: a small open circle at the datum. Paper-size (position maps through a View transform, diameter doesn't scale); has `bounds()`. Pair with `ordinateDimensions`.
+- `chainAngularDimension(vertex, rays, options: AngularDimensionOptions): AngularDimension[]`
+- `baselineAngularDimension(vertex, rays, options: AngularDimensionOptions & { stackSpacing?=10 }): AngularDimension[]`
+- (`rays`/`points` order matters: CCW, same reflex-angle caveat as `AngularDimension`.)
+
+Leader internals (compose your own leader-based annotation):
+- `LeaderOptions extends DimensionStyle = { leaderLengthMM?=8, elbowLengthMM?=4, arrow?=true }`
+- `computeLeaderGeometry(start, angleDeg, options?): LeaderGeometry`
+- `renderLeaderLine(start, angleDeg, geometry, options?): string`; `leaderLineElements(...)` for the `DrawingElement[]`
+- `renderElbowLeader(start, angleDeg, text: string | string[], options?): string` — text may be a stacked-line array; `elbowLeaderElements(...)` for elements
+- `arrowhead(tip, direction, options?: { length?=3, width?=1, color? }): DrawingElement`
+
+Tolerance/label formatting internals:
+- `normalizeTolerance(input: number | { plus, minus }): { plus, minus }`
+- `formatToleranceText(nominalText, options: ToleranceOptions, format: number | ResolvedMeasurementFormat): string`
+- `formatLimits(measured, tolerance, format: number | ResolvedMeasurementFormat): { upper: string; lower: string }` — `measured`/tolerance already in the format's display unit.
+- `estimateTextWidth(text, size, bold?=false): number` — real Adobe AFM per-glyph advance widths (Helvetica/-Bold).
+- `renderDimensionLabel(...)` / `dimensionLabelElements(...)` — the label block (value + tolerance/limits/dual), as SVG or `DrawingElement`/`TextElement`s.
+- `renderBasicBox(...)` / `basicBoxElement(...)` — the boxed basic-dimension frame.
+
+## Export
+
+### DXF (R12/AC1009)
+- `pathToPolyline(path: Path): { vertices: { x, y, bulge }[], closed: boolean }` — exact arc-preserving conversion (bulge values), unlike `Path.flatten()`.
+- `exportDXF(elements: DXFExportInput[], options?: { precision?=6 }): string` — R12/AC1009 DXF. Accepts (bare or wrapped for a layer/linetype/color override):
+  - **Geometry** — `DrawingElement` → `POLYLINE` (arcs as bulge; elliptical arcs tessellated). Layer/linetype auto-inferred from `lineStyle` unless overridden.
+  - **Text** — `TextElement` → one `TEXT` entity per line (height + anchor/baseline justification; multi-line stacks downward — R12 `TEXT` is single-line).
+  - **Native dimensions** — `LinearDimension` / `RadialDimension` / `DiameterDimension` / `AngularDimension` / `OrdinateDimension` → native `DIMENSION` entities (DIMSTYLE table + an anonymous picture block per dim, on a `"DIMENSIONS"` layer). Dimtypes: linear 0/1, radius 4, diameter 3, angular 2, ordinate 6 (|64 for axis "x"). `LinearDimension.dimensionData()` / the others' `dimensionDXF()` expose the definition the exporter reads.
+  - **GD&T** — `FeatureControlFrame`, `CompositeFeatureControlFrame`, `MultipleSingleSegmentFrame`, `DatumFeatureSymbol`, `DatumTargetSymbol` → exploded to `POLYLINE`/`TEXT` on a `"GDT"` layer (R12 has no native FCF entity). Each implements `Explodable` (`toElements()`), and its `toSVG()` derives from the same list so SVG/DXF can't drift.
+  - **Title blocks / tables** — `{ titleBlock, context: { sheetWidthMM, marginMM, paperSizeLabel? } }` for a `TitleBlock`/`GridTitleBlock`/`ISO7200TitleBlock`, or a bare anchored `BOMTable`/`RevisionTable`, exploded onto a `"TITLEBLOCK"` layer.
+  - **Any other `Explodable` annotation** — the callout/leader family (`Callout`, `MultiLeader`, `DetailViewCallout`), the symbol/tag family (`ExaminationSymbol`, `ItemBalloon`, `RevisionSymbol`, `OrdinateOrigin`), the notes family (`NotesBlock`, `FlagNote`), and view/section + isometric + misc-dim annotations (`ViewLabel`, `ViewArrow`, `CuttingPlaneLine`, `IsometricText`, `IsometricLinearDimension`, `ArcLengthDimension`, `JoggedRadiusDimension`) → exploded onto an `"ANNOTATIONS"` layer. `Explodable.toElements(context?)` takes an optional RenderContext so a view transform bakes into the exported geometry. Sheared/rotated text (IsometricText, IsometricLinearDimension value) explodes to upright DXF text.
+  - **`BlockInstance`** → a shared DXF `BLOCK` definition + one `INSERT` per placement (position/uniform-scale/rotation). Duplicate block names disambiguated; only geometry/text inside a block emitted (nested blocks/dimensions skipped). `BlockInstance.placement()` exposes what the exporter reads.
+- `importDXF(dxf: string): { elements: DrawingElement[], texts: TextElement[] }` — inverse of `exportDXF` geometry/text. Reads ENTITIES: LINE/CIRCLE/ARC/LWPOLYLINE/POLYLINE (arcs recovered from bulges) + TEXT; recovers `lineStyle` from layer. Idempotent round-trip. Unsupported entity types (SPLINE/ELLIPSE/INSERT/HATCH/DIMENSION/MTEXT/3D) skipped; colors dropped.
+- `sheet.toDXF(options?: { precision?, onUnsupported?(msg) }): string` — whole-sheet R12 DXF (counterpart to `sheet.toSVG()`). Walks content (recursing `Layer`s and `View`s), emits the border on a `"BORDER"` layer, bakes a `View`'s scale/rotation/translation into geometry (via `Path.transformed`/`applyViewTransform`), and explodes the title block. A native dimension inside a scaled/rotated view can't carry the transform and is reported via `onUnsupported` (not emitted wrong). `plainBorderElements`/`zonedBorderElements` back the border.
+
+### PDF (whole sheet — border, title block, dimensions, GD&T, hatching, everything)
+- `exportPDF(sheet: Sheet, options?: { widthMM?, heightMM?, font?: { data: Uint8Array } }): string` — parses `sheet.toSVG()`'s own markup into PDF content ops; `Layer`s become real toggleable PDF Optional Content Groups. Text uses standard Helvetica by default (WinAnsi/Latin-1 only; `⌀`/`⌴`/`⌵` auto-substituted to `Ø`/`CBORE`/`CSK`). Pass `font.data` a `.ttf` or `.otf` to embed it (Type0/Identity-H, ToUnicode) and render arbitrary Unicode — no bundled font, still plain-ASCII/deterministic. glyf TrueType → `FontFile2`, subsetted to used glyphs (composite-aware). OpenType/CFF (OTTO) → the `CFF ` table as `FontFile3` in a `CIDFontType0`, glyph-subsetted — both plain and CID-keyed CFFs. `bold` runs are faux-bolded by stroking the outline.
+
+---
+
+## More examples
+
+### GD&T: datum + position tolerance
+
+```ts
+import { DatumFeatureSymbol, FeatureControlFrame, circle, centerMark, DrawingElement } from "@invisra/draft";
+
+const edgeMidpoint = { x: 100, y: 150 };
+sheet.add(new DatumFeatureSymbol(edgeMidpoint, "A", { angleDeg: 90 }));
+
+const hole = { x: 120, y: 130 };
+const r = 4;
+sheet.add(new DrawingElement(circle(hole.x, hole.y, r)));
+for (const mark of centerMark(hole, r, 2.5)) sheet.add(new DrawingElement(mark, { lineStyle: "centerline" }));
+
+sheet.add(new FeatureControlFrame({ x: 140, y: 100 }, "position", 0.1, {
+  diameter: true,
+  modifier: "MMC",
+  datums: [{ letter: "A" }],
+}));
+```
+
+### Hatching with a material pattern (holes stay unhatched)
+
+```ts
+import { hatchPattern, ANSI32, rectangle, circle, DrawingElement } from "@invisra/draft";
+
+const outer = rectangle(20, 20, 60, 40);
+const hole = circle(40, 40, 8);
+for (const line of hatchPattern([outer, hole], ANSI32)) sheet.add(line); // ANSI32 = steel
+sheet.add(new DrawingElement(outer));
+sheet.add(new DrawingElement(hole));
+```
+
+### Tolerances: symmetric, asymmetric, and stacked limits
+
+```ts
+import { LinearDimension } from "@invisra/draft";
+
+sheet.add(new LinearDimension({ x: 0, y: 0 }, { x: 80, y: 0 }, { offset: -12, orientation: "horizontal", tolerance: 0.1 }));            // "80.00 ±0.10"
+sheet.add(new LinearDimension({ x: 0, y: 0 }, { x: 80, y: 20 }, { offset: 10, tolerance: { plus: 0.2, minus: 0.05 } }));                 // "... +0.20/-0.05"
+sheet.add(new LinearDimension({ x: 0, y: 20 }, { x: 0, y: 60 }, { offset: 12, orientation: "vertical", tolerance: 0.1, toleranceDisplay: "limits" })); // stacked upper/lower
+```
+
+### Multi-sheet set + DXF/PDF export
+
+```ts
+import { DrawingSet, Sheet, TitleBlock, DrawingElement, rectangle, exportDXF, exportPDF } from "@invisra/draft";
+
+const set = new DrawingSet();
+const geometryElements: DrawingElement[] = [];
+
+set.add(({ sheetLabel }) => {
+  const sheet = new Sheet();
+  sheet.setTitleBlock(new TitleBlock({ title: "PLATE", drawingNumber: "DRW-2", sheet: sheetLabel }));
+  const el = new DrawingElement(rectangle(20, 20, 80, 50));
+  geometryElements.push(el);
+  sheet.add(el);
+  return sheet;
+});
+set.add(({ sheetLabel }) => {
+  const sheet = new Sheet();
+  sheet.setTitleBlock(new TitleBlock({ title: "PLATE - DETAIL", drawingNumber: "DRW-2", sheet: sheetLabel }));
+  return sheet;
+});
+
+const sheets = set.build();          // [sheet1, sheet2], each knows "1 OF 2" / "2 OF 2"
+const svgs = sheets.map((s) => s.toSVG());
+const dxf = exportDXF(geometryElements);   // geometry only
+const pdf = exportPDF(sheets[0]!);         // whole sheet 1, border/title block included
+```
+
+## Known gaps (don't assume these exist)
+
+- **Mechanical drafting** (fasteners, threads, ISO 286 / ISO 2768 / ASME B4.1 fits,
+  surface finish, weld symbols, gears/springs/cams, hole & chamfer callouts,
+  tolerance stack-ups) is in the separate `@invisra/draft-mechanical` package, not here.
+- **DXF R12** has no native entity for annotations, GD&T frames, or tables, so those
+  explode to `POLYLINE`/`TEXT` (dimensions do use native `DIMENSION`). Sheared/obliqued
+  text (isometric text and dimension values) exports upright.
+- **PDF default font**: with no `options.font`, text uses non-embedded Helvetica
+  (WinAnsi/Latin-1 only). Pass a `.ttf`/`.otf` to embed + glyph-subset it (TrueType and
+  CFF, incl. CID-keyed) and render arbitrary Unicode — a default, not a hard limit.

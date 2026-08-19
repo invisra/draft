@@ -7,7 +7,7 @@ import { TextElement } from "../svg/text.js";
 import { arrowhead } from "./arrowhead.js";
 import { resolveDimensionStyle, type DimensionStyle } from "./style.js";
 
-/** Options shared by every elbow-leader annotation (`Callout`, `HoleCallout`, `RadialDimension`, `WeldSymbol`, `ItemBalloon`, `DetailViewCallout`). */
+/** Options shared by every elbow-leader annotation (`Callout`, `RadialDimension`, `ItemBalloon`, `DetailViewCallout`). */
 export interface LeaderOptions extends DimensionStyle {
   /** Length of the leader segment from `start` outward, before the elbow. Defaults to 8mm. */
   leaderLengthMM?: number;
@@ -66,7 +66,7 @@ export function leaderLineElements(start: Point, angleDeg: number, geometry: Lea
   return parts;
 }
 
-/** The leader line + elbow + shoulder + optional arrowhead, without text — for callers composing their own text/icon layout (see `HoleCallout`). */
+/** The leader line + elbow + shoulder + optional arrowhead, without text — for callers composing their own text/icon layout (see `Callout`). */
 export function renderLeaderLine(start: Point, angleDeg: number, geometry: LeaderGeometry, options: LeaderOptions = {}): string {
   return leaderLineElements(start, angleDeg, geometry, options)
     .map((el) => el.toSVG())

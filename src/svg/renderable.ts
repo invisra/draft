@@ -35,7 +35,7 @@ export interface RenderContext {
    * delivered here at render time. Honored by the dimension classes
    * (`LinearDimension`, `AngularDimension`, `RadialDimension`/
    * `DiameterDimension`, `OrdinateDimension`) and the elbow-leader callouts
-   * (`Callout`, `ChamferCallout`, `HoleCallout`); other renderables ignore it.
+   * (`Callout`, `MultiLeader`, `DetailViewCallout`); other renderables ignore it.
    */
   dimensionDefaults?: DimensionStyle;
   /**

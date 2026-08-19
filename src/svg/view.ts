@@ -44,7 +44,7 @@ export interface ViewOptions {
  * annotations (a `"SCALE 2:1"` label, a section title) relative to the view.
  *
  * Honored by geometry (`DrawingElement`), `TextElement`, the dimension classes,
- * and the elbow-leader callouts (`Callout`/`ChamferCallout`/`HoleCallout`).
+ * and the elbow-leader callouts (`Callout`/`MultiLeader`/`DetailViewCallout`).
  * Other annotation classes render at paper scale regardless — position those
  * with `toPaper()`. Views don't compose: a nested `View` replaces the outer
  * transform rather than multiplying it.
