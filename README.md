@@ -121,11 +121,6 @@ type) comes from `npm run docs`. At a glance:
   (`SECTION A-A`) & viewing-direction arrows,
   revision clouds & tables, BOM
   tables, general notes, and nondestructive-examination (NDE) symbols.
-- **Mechanical elements** — fasteners & threads, ISO 286 / ISO 2768 / ASME B4.1
-  fits & tolerances, surface-finish symbols, weld symbols, gears / springs / cams,
-  hole & chamfer callouts, and tolerance stack-ups now live in the companion
-  package **[`@invisra/draft-mechanical`](https://github.com/invisra/draft-mechanical)**,
-  which builds on this core.
 - **Export** — SVG (native), PDF (a dependency-free writer with native beziers and
   an optional embedded, glyph-subsetted TrueType or OpenType/CFF font), and DXF (R12) export — geometry, text,
   native dimensions (linear / radial / diameter / angular / ordinate), and

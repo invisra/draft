@@ -26,8 +26,8 @@ export interface InchToleranceBlockOptions {
  *
  * Returns one string per provided field, in reading order (fractional, then
  * `.X`→`.XXXX`, then angular) — pass it straight into
- * `TitleBlockFields.generalTolerance`, the inch counterpart to the ISO 2768
- * general-tolerance note (`iso2768Note` in `@invisra/draft-mechanical`). The
+ * `TitleBlockFields.generalTolerance`, the inch counterpart to an ISO 2768
+ * general-tolerance note. The
  * block covers only the general-tolerance lines
  * themselves; the "UNLESS OTHERWISE SPECIFIED / DIMENSIONS ARE IN INCHES"
  * heading is conventionally a separate general note.

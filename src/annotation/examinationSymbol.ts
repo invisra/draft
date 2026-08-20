@@ -68,8 +68,8 @@ export interface ExaminationSymbolOptions extends LeaderOptions {
  * and a `fieldExam` flag attach at the arrow/reference-line junction (§17.4); a `radiationAngleDeg`
  * draws the radiation-direction arrow with its degree value (§17.4).
  *
- * Built on the same elbow-leader geometry as the weld symbols in
- * `@invisra/draft-mechanical`. Validated against AWS A2.4:2020
+ * Built on the same elbow-leader geometry as the other leader annotations.
+ * Validated against AWS A2.4:2020
  * clause 17. Not covered (documented in the README): multiple/sequenced reference lines.
  */
 export class ExaminationSymbol implements Renderable, Explodable {

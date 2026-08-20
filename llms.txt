@@ -11,9 +11,8 @@ For full per-symbol TSDoc, see dist/index.d.ts or the generated docs/ site.
 
 Mechanical-engineering drafting — fasteners & threads, ISO 286 / ISO 2768 /
 ASME B4.1 fits & tolerances, surface-finish & weld symbols, gears / springs /
-cams, hole & chamfer callouts, tolerance stack-ups — lives in the companion
-package `@invisra/draft-mechanical`, which builds on this core. None of those
-symbols are exported from `@invisra/draft`.
+cams, hole & chamfer callouts, tolerance stack-ups — is out of scope for this
+package; none of those symbols are exported from `@invisra/draft`.
 
 ```sh
 npm install @invisra/draft
@@ -280,7 +279,7 @@ class DrawingSet {
 - `class DetailViewCallout implements Renderable { constructor(center: Point, radius: number, options: { angleDeg, label, text?, strokeWidthMM?, color? }) }` — phantom-line circle + elbow leader to "DETAIL X".
 - `class ViewLabel implements Renderable { constructor(position: Point, title: string, options?: { scale?, textSizeMM?=5, scaleSizeMM?, anchor?="middle", underline?=false, strokeWidthMM?=0.5, color? }) }` — bold view title ("SECTION A-A"/"VIEW A"/"DETAIL B" — caller owns the full string), optional smaller scale caption below + optional underline. The title the section/detail markers don't draw.
 - `class ViewArrow implements Renderable { constructor(tail: Point, options: { angleDeg, label, lengthMM?=12, arrowLengthMM?=3.5, arrowWidthMM?=1.2, labelSizeMM?=5, strokeWidthMM?=0.6, color? }) }` — ISO 128-30 viewing-direction (arrow method) indicator: thick arrow in the sight direction + bold letter at the tail; the referenced view is titled with the same letter via ViewLabel. Both stay paper-size under a View transform.
-- `class ExaminationSymbol implements Renderable, Explodable { constructor(jointPoint: Point, options: ExaminationSymbolOptions) }` — AWS A2.4:2020 clause 17 (nondestructive examination). `ExamSpec = { methods: string|string[] (RT/UT/MT/PT/VT/ET…, array joined with "+"), length? (extent or "25%"), count? }`. `ExaminationSymbolOptions = { angleDeg, arrowSide?: ExamSpec, otherSide?: ExamSpec, centered?: ExamSpec, allAround?, fieldExam?, tailNote?, radiationAngleDeg?, refLineLengthMM?, textSizeMM?, ...DimensionStyle-ish }`. Designation below line (arrowSide) / above (otherSide) / straddling (centered); length right of designation, count in parens away from line; `radiationAngleDeg` draws the radiation-direction arrow (§17.4). Not covered: sequenced reference lines. (Weld symbols themselves live in `@invisra/draft-mechanical`.)
+- `class ExaminationSymbol implements Renderable, Explodable { constructor(jointPoint: Point, options: ExaminationSymbolOptions) }` — AWS A2.4:2020 clause 17 (nondestructive examination). `ExamSpec = { methods: string|string[] (RT/UT/MT/PT/VT/ET…, array joined with "+"), length? (extent or "25%"), count? }`. `ExaminationSymbolOptions = { angleDeg, arrowSide?: ExamSpec, otherSide?: ExamSpec, centered?: ExamSpec, allAround?, fieldExam?, tailNote?, radiationAngleDeg?, refLineLengthMM?, textSizeMM?, ...DimensionStyle-ish }`. Designation below line (arrowSide) / above (otherSide) / straddling (centered); length right of designation, count in parens away from line; `radiationAngleDeg` draws the radiation-direction arrow (§17.4). Not covered: sequenced reference lines. (Weld symbols themselves are out of scope for this package.)
 - `class ItemBalloon implements Renderable { constructor(touchPoint: Point, itemNumber: string|number, options: { angleDeg, terminus?: "dot"|"arrow", radiusMM?, ... }) }` — BOM cross-reference balloon.
 - `zigzagBreakLine(p1, p2, options?: { strokeWidthMM?, color?, amplitudeMM?=4, widthMM?=10 }): DrawingElement` — "long break" for a flat member; call once per edge.
 - `cylindricalBreakLine(p1, p2, options?: { strokeWidthMM?, color? }): DrawingElement` — "S-break" for round shaft/tube; `p1`/`p2` span the diameter; call once (covers both edges).
@@ -307,8 +306,8 @@ class DrawingSet {
 - Material-condition calculator (`bonusTolerance.ts`): `bonusTolerance(feature, actualSize): number` / `totalToleranceAt(feature, actualSize): number` / `virtualCondition(feature): { mmc, lmc, virtualCondition, resultantCondition }` — ASME Y14.5 material-condition calc. `FeatureToleranceInput = { featureType: "internal"|"external", minSize, maxSize, geometricTolerance, modifier: "MMC"|"LMC"|"RFS" }`. internal→MMC=minSize; external→MMC=maxSize. bonus = departure from MMC/LMC (0 for RFS); MMC modifier: external VC=MMC+t/RC=LMC−t, internal VC=MMC−t/RC=LMC+t (LMC reverses).
 
 > ISO 286 / ISO 2768 / ASME B4.1 limits & fits, surface-finish symbols, and
-> tolerance stack-ups are **not** in this package — import them from
-> `@invisra/draft-mechanical`.
+> tolerance stack-ups are **not** in this package — they're out of scope for
+> `@invisra/draft`.
 
 ## Dimensioning
 
@@ -319,7 +318,7 @@ class DrawingSet {
 - Inch display styles (`unit: "in"` only, via `DimensionStyle.inchDisplay` / `MeasurementFormat.inchDisplay`): `"decimal"` (default), `"fractional"` (`3/8`, `1 1/2`), `"architectural"` (`3'-6 1/2"`); `fractionDenominator` (power of two, default 16). Standalone: `formatFractionalInches(valueIn, denom?=16): string`, `formatArchitecturalInches(valueIn, denom?=16): string`.
 - DMS angles: `AngularDimension` `angleFormat?: "decimal"|"dms"` → `30°30′`. Standalone: `formatAngleDMS(decimalDegrees, secondsPrecision?=0): string`.
 - Dual dimensioning (ASME Y14.5 §2.4 bracket method): set `dualUnit` to append the value in a second unit — `50.00 [1.969]`; tolerance converted too (`50.00 ±0.50 [1.969 ±.020]`), prefixes repeat (`⌀25.40 [⌀1.000]`). Honored by LinearDimension (+chain/baseline) and Radial/DiameterDimension; text-override or AngularDimension → no bracket. Helpers: `resolveDualFormat(style): ResolvedMeasurementFormat|null`, `dualSecondary(valueMM, prefix, style, tolOptions): string|undefined` (inner secondary text, no brackets), `appendDual(primaryText, valueMM, prefix, style, tolOptions): string`.
-- US decimal-inch block tolerance: `inchToleranceBlock(options: { onePlace?, twoPlace?, threePlace?, fourPlace?: number, fractionalInch?: string, angularDeg?: number }): string[]` — e.g. `[".X ±.03", ".XX ±.01", ".XXX ±.005", "ANGLES ±0.5°"]`; feed into `TitleBlockFields.generalTolerance`. `formatInchToleranceValue(value): string` formats a single band. (The ISO 2768 counterpart, `iso2768Note`, is in `@invisra/draft-mechanical`.)
+- US decimal-inch block tolerance: `inchToleranceBlock(options: { onePlace?, twoPlace?, threePlace?, fourPlace?: number, fractionalInch?: string, angularDeg?: number }): string[]` — e.g. `[".X ±.03", ".XX ±.01", ".XXX ±.005", "ANGLES ±0.5°"]`; feed into `TitleBlockFields.generalTolerance`. `formatInchToleranceValue(value): string` formats a single band. (The ISO 2768 counterpart, `iso2768Note`, is out of scope for this package.)
 - Document-wide defaults: `new Sheet({ dimensionDefaults: DimensionStyle })` merges that style UNDER every dimension/leader element's own options at render time (per-element wins), so a whole sheet is inches/one style in one place. Presets: `ASME_INCH` (`{unit:"in",zeroHandling:"inch"}`), `ASME_METRIC`, `ISO_METRIC` (`{unit:"mm",zeroHandling:"metric"}`). Flows through `Layer`s and into PDF export. Honored by dimensions + `Callout`; `AngularDimension` ignores an inherited `unit`. `mergeDimensionDefaults(options, defaults): options` exposes the merge; `Renderable.toSVG(context?: RenderContext)` and `RenderContext = { dimensionDefaults? }` carry it.
 
 `ToleranceOptions` (shared by every dimension class): `{ tolerance?: number | { plus, minus }, toleranceDisplay?: "nominal"|"limits", basic?: boolean, reference?: boolean, count?: number, typical?: boolean, notToScale?: boolean }`.
@@ -386,8 +385,8 @@ class OrdinateDimension implements Renderable {  // ASME arrowless coordinate di
 ```
 
 > Hole callouts (`HoleCallout`), chamfer callouts (`ChamferCallout`), taper
-> callouts (`TaperCallout`), and hole tables (`HoleTable`/`HoleTag`) live in
-> `@invisra/draft-mechanical`, not this package.
+> callouts (`TaperCallout`), and hole tables (`HoleTable`/`HoleTag`) are not
+> part of this package.
 
 Stacking helpers (return arrays — loop and `.add()`):
 - `chainDimension(points, options: LinearDimensionOptions): LinearDimension[]` — consecutive pairs, one shared offset.
@@ -509,7 +508,7 @@ const pdf = exportPDF(sheets[0]!);         // whole sheet 1, border/title block 
 
 - **Mechanical drafting** (fasteners, threads, ISO 286 / ISO 2768 / ASME B4.1 fits,
   surface finish, weld symbols, gears/springs/cams, hole & chamfer callouts,
-  tolerance stack-ups) is in the separate `@invisra/draft-mechanical` package, not here.
+  tolerance stack-ups) is out of scope for this package.
 - **DXF R12** has no native entity for annotations, GD&T frames, or tables, so those
   explode to `POLYLINE`/`TEXT` (dimensions do use native `DIMENSION`). Sheared/obliqued
   text (isometric text and dimension values) exports upright.
