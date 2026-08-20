@@ -628,8 +628,8 @@ function insertEntity(name: string, placement: ResolvedInsert["placement"], prec
  * {@link DXFTitleBlockInput} pairs a `TitleBlock`/`GridTitleBlock`/`ISO7200TitleBlock` with the
  * sheet `context` that positions it (the same context a `Sheet` supplies), and a bare `BOMTable`
  * or `RevisionTable` (anchored, so no context needed) explodes directly. Any other
- * {@link Explodable} annotation — the callout/leader family (`Callout`, `ChamferCallout`,
- * `HoleCallout`, `TaperCallout`, `MultiLeader`, `DetailViewCallout`) — explodes onto a generic
+ * {@link Explodable} annotation — the callout/leader family (`Callout`, `MultiLeader`,
+ * `DetailViewCallout`) and the symbol/note families — explodes onto a generic
  * `"ANNOTATIONS"` layer. `MTEXT` isn't used — it's an R13+ entity, and this writer targets
  * R12/`AC1009`.
  *

@@ -77,10 +77,10 @@ A few principles shape the whole library:
 
 ## Features
 
-Each feature below is documented in full — with the exact options, standards
-references, and rendering notes — in **[FEATURES.md](./FEATURES.md)**. The
-complete generated API (every exported class, function, and type) comes from
-`npm run docs`. At a glance:
+Each feature below is indexed — with the exact options, standards references, and
+rendering notes — in **[`llms.txt`](./llms.txt)**, a dense one-line-per-export
+API reference. The complete generated API (every exported class, function, and
+type) comes from `npm run docs`. At a glance:
 
 - **Geometry** — a Canvas2D-style `Path` builder (line / arc / elliptical-arc /
   cubic-Bézier), ready-made shapes (`rectangle`, `roundedRectangle`, `circle`,
@@ -121,11 +121,6 @@ complete generated API (every exported class, function, and type) comes from
   (`SECTION A-A`) & viewing-direction arrows,
   revision clouds & tables, BOM
   tables, general notes, and nondestructive-examination (NDE) symbols.
-- **Mechanical elements** — fasteners & threads, ISO 286 / ISO 2768 / ASME B4.1
-  fits & tolerances, surface-finish symbols, weld symbols, gears / springs / cams,
-  hole & chamfer callouts, and tolerance stack-ups now live in the companion
-  package **[`@invisra/draft-mechanical`](https://github.com/invisra/draft-mechanical)**,
-  which builds on this core.
 - **Export** — SVG (native), PDF (a dependency-free writer with native beziers and
   an optional embedded, glyph-subsetted TrueType or OpenType/CFF font), and DXF (R12) export — geometry, text,
   native dimensions (linear / radial / diameter / angular / ordinate), and
@@ -155,18 +150,11 @@ source.
 
 ## Known gaps
 
-Everything originally on the roadmap has landed, and the standards coverage has
-since been filled out (AWS A2.4 welding/NDE is feature-complete; ISO 286 covers
-the full letter set; DXF exports whole sheets including view-nested dimensions;
-PDF embeds both TrueType and OpenType/CFF fonts). What remains genuinely out of
-scope — mostly where a standard doesn't tabulate the values or a target format
-has no native representation:
+The core is feature-complete for 2D sheet layout: DXF exports whole sheets
+including view-nested dimensions, and PDF embeds both TrueType and OpenType/CFF
+fonts. What remains genuinely out of scope is mostly where a target format has no
+native representation:
 
-- **ISO 286 fits** beyond what the standard tabulates: for the *fit* functions,
-  grades outside IT5–IT16, and — over 500mm — the shaft/hole letters `a b c` and
-  `v`–`zc` (ISO 286 doesn't list deviations for those larger sizes). The full
-  letter set is otherwise covered on both sides with `d`–`u`/`D`–`U` to 3150mm,
-  and IT-grade *widths* (`standardTolerance`) span IT01–IT18 to 3150mm.
 - **DXF R12 has no native entity** for annotations, GD&T frames, or tables, so
   those explode to `POLYLINE`/`TEXT` (dimensions do use native `DIMENSION`).
   Sheared/obliqued text — isometric text and dimension values — exports upright,
@@ -178,5 +166,5 @@ has no native representation:
 
 ## License
 
-MIT © Invisra Labs LLC — see [LICENSE](./LICENSE). See [CHANGELOG.md](./CHANGELOG.md)
-for release history.
+MIT © Invisra Labs LLC — see [LICENSE](./LICENSE). Release history is on the
+[GitHub releases page](https://github.com/invisra/draft/releases).

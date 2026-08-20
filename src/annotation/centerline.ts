@@ -39,7 +39,7 @@ export interface AxisCenterlineOptions extends CenterlineStyleOptions {
  * symmetry. Drawn with the `"centerline"` line style, extended `overshoot` past each
  * end. With `symmetryTicks`, adds the two short parallel strokes at each end that
  * denote a line of symmetry on a partial/half view. Returns `DrawingElement`s, like
- * `threadSideView`/`hexHead`.
+ * `centerMark`/`boltCircleCenterline`.
  */
 export function axisCenterline(p1: Point, p2: Point, options: AxisCenterlineOptions = {}): DrawingElement[] {
   const span = subtractPoints(p2, p1);

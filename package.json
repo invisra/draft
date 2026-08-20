@@ -39,8 +39,6 @@
   "sideEffects": false,
   "files": [
     "dist",
-    "CHANGELOG.md",
-    "FEATURES.md",
     "llms.txt"
   ],
   "engines": {

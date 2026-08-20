@@ -23,7 +23,7 @@ export interface ItemBalloonOptions extends LeaderOptions {
 /**
  * A circled item/find number with a leader — the "balloon" that cross-references a part in an
  * assembly view to its row in a `BOMTable`. Built on the same elbow-leader geometry as
- * `Callout`/`WeldSymbol`; the circle sits at the end of the leader's horizontal shoulder, its
+ * `Callout`/`DetailViewCallout`; the circle sits at the end of the leader's horizontal shoulder, its
  * near edge touching the shoulder so the leader visually runs into it.
  */
 export class ItemBalloon implements Renderable, Explodable {
